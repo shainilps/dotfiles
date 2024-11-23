@@ -20,11 +20,13 @@ vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 -- Move to first symbol on the line
 vim.keymap.set("n", "H", "^")
 
+vim.keymap.set("v", "H", "^")
 -- Move to last symbol of the line
 vim.keymap.set("n", "L", "$")
+vim.keymap.set("v", "L", "$")
 
 -- Shift + q - Quit
-vim.keymap.set("n", "Q", "<C-W>q")
+-- vim.keymap.set("n", "Q", "<C-W>q")
 
 -- vv - Makes vertical split
 vim.keymap.set("n", "vv", "<C-W>v")

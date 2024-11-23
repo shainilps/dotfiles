@@ -119,8 +119,6 @@ source $ZSH/oh-my-zsh.sh
 [ -s "/home/codeshaine/.bun/_bun" ] && source "/home/codeshaine/.bun/_bun"
 
 # bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
@@ -134,7 +132,7 @@ export NVM_DIR="$HOME/.nvm"
 # for the nvim alias
 alias v='nvim'
 alias run="sh ~/cscript/bin/run.sh"
-
+alias python="python3"
 
 
 #promodoro app by bashbunni

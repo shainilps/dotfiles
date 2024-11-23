@@ -31,10 +31,12 @@ return {
 			debug = true,
 		})
 		vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, { noremap = true })
-		vim.api.nvim_create_autocmd("BufWritePre", {
-			callback = function()
-				vim.lsp.buf.format({ async = false })
-			end,
-		})
+
+		--format on save feature is this
+		-- vim.api.nvim_create_autocmd("BufWritePre", {
+		--   callback = function()
+		--     vim.lsp.buf.format({ async = false })
+		--   end,
+		-- })
 	end,
 }
