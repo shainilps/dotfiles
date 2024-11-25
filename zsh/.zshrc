@@ -115,10 +115,7 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# bun completions
-[ -s "/home/codeshaine/.bun/_bun" ] && source "/home/codeshaine/.bun/_bun"
 
-# bun
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
@@ -153,4 +150,3 @@ alias python="python3"
 # alias brk="pomodoro 'break'"
 #
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
