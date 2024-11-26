@@ -17,6 +17,7 @@ return {
 					"ts_ls",
 					"gopls",
 					"clangd",
+          "svelte",
 					"cssls",
 					"html",
 					"sqls",
@@ -25,7 +26,7 @@ return {
 			})
 		end,
 	},
-	-- nvim lsp config
+	-- nvim lsp 
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
@@ -34,12 +35,12 @@ return {
 			lspconfig.lua_ls.setup({
 				capabilities = capabilities,
 			})
-
 			lspconfig.ts_ls.setup({ capabilities = capabilities })
 			lspconfig.gopls.setup({
 				capabilities = capabilities,
 			})
 			lspconfig.clangd.setup({ capabilities = capabilities })
+			lspconfig.svelte.setup({ capabilities = capabilities })
 			lspconfig.cssls.setup({ capabilities = capabilities })
 			lspconfig.html.setup({ capabilities = capabilities })
 			lspconfig.sqls.setup({ capabilities = capabilities })
