@@ -130,6 +130,8 @@ export NVM_DIR="$HOME/.nvm"
 alias v='nvim'
 alias run="sh ~/cscript/bin/run.sh"
 alias python="python3"
+alias p="pnpm"
+alias px="pnpx"
 
 
 #promodoro app by bashbunni
@@ -150,3 +152,12 @@ alias python="python3"
 # alias brk="pomodoro 'break'"
 #
 
+alias keploy='sudo -E env PATH="$PATH" keploy'
+
+# pnpm
+export PNPM_HOME="/home/codeshaine/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
