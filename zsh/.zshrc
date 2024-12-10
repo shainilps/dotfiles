@@ -161,3 +161,17 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+
+
+#recycle bin
+trash(){
+ if [ -z "$1" ]; then
+    echo "Usage: trash <file>"
+    return 1
+  fi
+ dir="/home/codeshaine/recycle_bin/$(date +'%d-%m-%Y')"
+ mkdir -p "$dir"
+ mv "$1" "$dir"
+ echo "Moved '$1' to $dir"
+}
