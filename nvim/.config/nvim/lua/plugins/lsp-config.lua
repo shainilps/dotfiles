@@ -25,6 +25,7 @@ return {
           "dockerls",
           "docker_compose_language_service",
           "elixirls",
+          "rust_analyzer"
         },
       })
     end,
@@ -51,7 +52,7 @@ return {
       lspconfig.dockerls.setup({ capabilities = capabilities })
       lspconfig.docker_compose_language_service.setup({ capabilities = capabilities })
       lspconfig.elixirls.setup({ capabilities = capabilities })
-      lspconfig.stimulus_ls.setup({ capabilities = capabilities })
+      lspconfig.rust_analyzer.setup({ capabilities = capabilities })
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
       vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
       vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
