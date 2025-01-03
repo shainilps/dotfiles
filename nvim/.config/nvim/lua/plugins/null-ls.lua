@@ -16,8 +16,9 @@ return {
 				null_ls.builtins.formatting.stylua,
 				null_ls.builtins.formatting.prettierd,
 				-- null_ls.builtins.code_actions.gomodifytags,
-				null_ls.builtins.formatting.prettier,
-				null_ls.builtins.formatting.clang_format,
+				-- null_ls.builtins.formatting.prettier,
+        null_ls.builtins.formatting.clang_format,
+				-- null_ls.builtins.formatting.php_cs_fixer,
 				-- null_ls.builtins.formatting.sql_formatter,
 				null_ls.builtins.diagnostics.golangci_lint,
 				require("none-ls.diagnostics.eslint_d").with({
