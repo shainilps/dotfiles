@@ -125,8 +125,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
-
 # for the nvim alias
+export PATH="$PATH:/opt/nvim-linux64/bin"
 alias v='nvim'
 alias run="sh ~/cscript/bin/run.sh"
 alias python="python3"
@@ -134,25 +134,7 @@ alias p="pnpm"
 alias px="pnpx"
 
 
-#promodoro app by bashbunni
-#
-# declare -A pomo_options
-# pomo_options["work"]="45"
-# pomo_options["break"]="10"
-#
-# pomodoro () {
-#   if [ -n "$1" -a -n "${pomo_options["$1"]}" ]; then
-#   val=$1
-#   echo $val | lolcat
-#   timer ${pomo_options["$val"]}m
-#   fi
-# }
-#
-# alias work="pomodoro 'work'"
-# alias brk="pomodoro 'break'"
-#
 
-alias keploy='sudo -E env PATH="$PATH" keploy'
 
 # pnpm
 export PNPM_HOME="/home/codeshaine/.local/share/pnpm"
