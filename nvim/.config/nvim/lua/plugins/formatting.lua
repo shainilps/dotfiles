@@ -20,7 +20,9 @@ return {
 				liquid = { "prettierd" },
 				lua = { "stylua" },
 				go = { "gofmt", "goimports" },
+				bash = { "shfmt" },
 			},
+
 			format_on_save = {
 				lsp_fallback = true,
 				async = false,

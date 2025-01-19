@@ -32,6 +32,7 @@ return {
 			typescriptreact = has_eslint_config() and { "eslint_d" } or {},
 			svelte = has_eslint_config() and { "eslint_d" } or {},
 			go = { "golangcilint" },
+			bash = { "shellcheck" },
 		}
 
 		-- Dynamically set linters based on ESLint configuration

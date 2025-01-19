@@ -25,8 +25,8 @@ return {
 					"dockerls",
 					"rust_analyzer",
 					"prismals",
-					-- "phpactor",
-					-- "intelephense"
+					"bashls",
+					"intelephense",
 				},
 			})
 		end,
@@ -46,11 +46,6 @@ return {
 			})
 			lspconfig.clangd.setup({
 				capabilities = capabilities,
-				-- cmd = {
-				-- 	-- "~/.local/share/nvim/mason/bin/clangd",
-				-- 	"clangd",
-				-- 	"-I /usr/include/x86_64-linux-gnu/c++/11/",
-				-- },
 			})
 			lspconfig.svelte.setup({ capabilities = capabilities })
 			lspconfig.cssls.setup({ capabilities = capabilities })
@@ -62,7 +57,14 @@ return {
 			lspconfig.elixirls.setup({ capabilities = capabilities })
 			lspconfig.rust_analyzer.setup({ capabilities = capabilities })
 			lspconfig.prismals.setup({ capabilities = capabilities })
-			-- lspconfig.phpactor.setup({ capabilities = capabilities })
+			lspconfig.bashls.setup({ capabilities = capabilities })
+			lspconfig.intelephense.setup({
+				capabilities = capabilities,
+				root_dir = function(fname)
+					return lspconfig.util.root_pattern("composer.json", ".git")(fname) or vim.fn.getcwd()
+				end,
+			})
+
 			-- lspconfig.intelephense.setup({ capabilities = capabilities })
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
