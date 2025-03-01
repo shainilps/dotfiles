@@ -18,11 +18,13 @@ return {
 					"gopls",
 					"clangd",
 					"svelte",
+					"astro",
 					"cssls",
 					"html",
 					"sqls",
 					"tailwindcss",
 					"dockerls",
+					"docker_compose_language_service",
 					"rust_analyzer",
 					"prismals",
 					"bashls",
@@ -48,6 +50,7 @@ return {
 				capabilities = capabilities,
 			})
 			lspconfig.svelte.setup({ capabilities = capabilities })
+			lspconfig.astro.setup({ capabilities = capabilities })
 			lspconfig.cssls.setup({ capabilities = capabilities })
 			lspconfig.html.setup({ capabilities = capabilities })
 			lspconfig.sqls.setup({ capabilities = capabilities })
