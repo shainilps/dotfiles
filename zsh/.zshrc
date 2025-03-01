@@ -131,7 +131,8 @@ alias v='nvim'
 alias run="sh ~/cscript/bin/run.sh"
 alias python="python3"
 alias p="pnpm"
-alias px="pnpx"
+alias px="pnpm exec"
+alias pxd="pnpm dlx"
 
 
 
@@ -157,3 +158,17 @@ trash(){
  mv "$1" "$dir"
  echo "Moved '$1' to $dir"
 }
+
+# bun completions
+[ -s "/home/codeshaine/.bun/_bun" ] && source "/home/codeshaine/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+ 
+# . "/home/codeshaine/.deno/env"
+
+
+alias bat='batcat'
+#for cursor
+export PATH="$HOME/.local/bin:$PATH"
