@@ -29,6 +29,7 @@ return {
 					"prismals",
 					"bashls",
 					"intelephense",
+					"elmls",
 				},
 			})
 		end,
@@ -61,6 +62,7 @@ return {
 			lspconfig.rust_analyzer.setup({ capabilities = capabilities })
 			lspconfig.prismals.setup({ capabilities = capabilities })
 			lspconfig.bashls.setup({ capabilities = capabilities })
+			lspconfig.elmls.setup({ capabilities = capabilities })
 			lspconfig.intelephense.setup({
 				capabilities = capabilities,
 				root_dir = function(fname)

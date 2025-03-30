@@ -170,5 +170,15 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 
 alias bat='batcat'
-#for cursor
+
 export PATH="$HOME/.local/bin:$PATH"
+
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
+
+
+# gid diff with fzf
+alias gd="git status -s | fzf --no-sort --reverse --preview 'git diff --color=always {+2}' --preview-window=right:60%:wrap"
+
+export FZF_DEFAULT_OPTS="--ansi --preview-window 'right:60%' --preview 'batcat --color=always --style=header,grid --line-range :300 {}'"
+

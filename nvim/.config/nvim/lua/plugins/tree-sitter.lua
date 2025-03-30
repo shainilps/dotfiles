@@ -21,6 +21,7 @@ return {
 				"html",
 				"php",
 				"prisma",
+				"elm",
 			},
 			sync_install = false,
 			highlight = { enable = true },
