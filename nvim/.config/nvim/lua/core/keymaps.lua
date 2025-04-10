@@ -1,14 +1,18 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
+--
+-- -- keymap for buffers
+-- vim.keymap.set("n", "<leader>bn", ":bn<CR>", { noremap = true, silent = true })
+-- vim.keymap.set("n", "<leader>bp", ":bp<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>bd", ":bd<CR>", { noremap = true, silent = true })
 
--- keymap for buffers
-vim.keymap.set("n", "<leader>bn", ":bn<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>bp", ":bp<CR>", { noremap = true, silent = true })
+-- Move through buffers like tabs (if using bufferline)
+vim.keymap.set("n", "<Tab>", ":bnext<CR>", { silent = true })
+vim.keymap.set("n", "<S-Tab>", ":bprevious<CR>", { silent = true })
 
 -- Keymaps for better default experience
 vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
 
--- Space + s saves the file
 vim.keymap.set("n", "<Leader>w", ":w<CR>", { silent = true })
 vim.keymap.set("n", "<Leader>q", ":q<CR>", { silent = true })
 vim.keymap.set("n", "<Leader>r", ":e<CR>", { silent = true })
@@ -19,7 +23,6 @@ vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 
 -- Move to first symbol on the line
 vim.keymap.set("n", "H", "^")
-
 vim.keymap.set("v", "H", "^")
 -- Move to last symbol of the line
 vim.keymap.set("n", "L", "$")

@@ -22,6 +22,7 @@ return {
 				"php",
 				"prisma",
 				"elm",
+				"python",
 			},
 			sync_install = false,
 			highlight = { enable = true },

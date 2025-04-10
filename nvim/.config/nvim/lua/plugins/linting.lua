@@ -33,6 +33,7 @@ return {
 			svelte = has_eslint_config() and { "eslint_d" } or {},
 			go = { "golangcilint" },
 			bash = { "shellcheck" },
+			python = { "ruff" },
 		}
 
 		-- Dynamically set linters based on ESLint configuration

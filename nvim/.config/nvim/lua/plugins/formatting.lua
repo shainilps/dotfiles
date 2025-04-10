@@ -23,6 +23,7 @@ return {
 				go = { "gofmt", "goimports" },
 				bash = { "shfmt" },
 				elm = { "elm-format" },
+        python = { "ruff" }
 			},
 
 			-- format_on_save = {
