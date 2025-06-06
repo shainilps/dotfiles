@@ -13,6 +13,7 @@ return {
 				"cpp",
 				"css",
 				"svelte",
+        "rust",
 				"typescript",
 				"elixir",
 				"javascript",

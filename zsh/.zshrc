@@ -129,6 +129,7 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="$PATH:/opt/nvim-linux64/bin"
 alias v='nvim'
 alias run="sh ~/cscript/bin/run.sh"
+alias startup="~/cscript/bin/startup"
 # alias python="python3"
 alias p="pnpm"
 alias px="pnpm exec"
@@ -153,7 +154,7 @@ trash(){
     echo "Usage: trash <file>"
     return 1
   fi
- dir="/home/codeshaine/recycle_bin/$(date +'%d-%m-%Y')"
+ dir="/home/$USER/recycle_bin/$(date +'%d-%m-%Y')"
  mkdir -p "$dir"
  mv "$1" "$dir"
  echo "Moved '$1' to $dir"
@@ -169,7 +170,7 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # . "/home/codeshaine/.deno/env"
 
 
-alias bat='batcat'
+# alias bat='batcat'
 
 export PATH="$HOME/.local/bin:$PATH"
 
@@ -206,3 +207,5 @@ unset __conda_setup
 alias vf='nvim $(fzf)'
 
 
+
+[ -f "/home/codeshaine/.ghcup/env" ] && . "/home/codeshaine/.ghcup/env" # ghcup-env
