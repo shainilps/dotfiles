@@ -184,25 +184,6 @@ alias gd="git status -s | fzf --no-sort --reverse --preview 'git diff --color=al
 export FZF_DEFAULT_OPTS="--ansi --preview-window 'right:60%' --preview 'batcat --color=always --style=header,grid --line-range :300 {}'"
 
 
-# export PATH="$HOME/miniconda3/bin:$PATH"  # commented out by conda initialize
-
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/codeshaine/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/codeshaine/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/codeshaine/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/codeshaine/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-
-# <<< conda initialize <<<
-
 
 alias vf='nvim $(fzf)'
 
