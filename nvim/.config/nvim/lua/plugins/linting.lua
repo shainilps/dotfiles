@@ -7,8 +7,8 @@ return {
 		-- Function to check for ESLint configuration in the project root
 		local function has_eslint_config()
 			local configs = {
-				"eslint.config.mjs",
-				".eslint.config.cjs",
+				-- "eslint.config.mjs",
+				-- ".eslint.config.cjs",
 				".eslint.config.js",
 				".eslintrc.yml",
 				".eslintrc.js",
@@ -21,7 +21,6 @@ return {
 					return true
 				end
 			end
-
 			return false
 		end
 

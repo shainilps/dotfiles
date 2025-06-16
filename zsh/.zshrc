@@ -126,7 +126,7 @@ export NVM_DIR="$HOME/.nvm"
 
 
 # for the nvim alias
-export PATH="$PATH:/opt/nvim-linux64/bin"
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 alias v='nvim'
 alias run="sh ~/cscript/bin/run.sh"
 alias startup="~/cscript/bin/startup"
