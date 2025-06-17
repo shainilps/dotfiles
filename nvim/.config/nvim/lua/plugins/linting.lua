@@ -4,7 +4,6 @@ return {
 	config = function()
 		local lint = require("lint")
 
-		-- Function to check for ESLint configuration in the project root
 		local function has_eslint_config()
 			local configs = {
 				-- "eslint.config.mjs",
@@ -32,7 +31,6 @@ return {
 			svelte = has_eslint_config() and { "eslint_d" } or {},
 			go = { "golangcilint" },
 			bash = { "shellcheck" },
-			python = { "ruff" },
 		}
 
 		-- Dynamically set linters based on ESLint configuration
