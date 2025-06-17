@@ -33,22 +33,6 @@ return {
 			bash = { "shellcheck" },
 		}
 
-		-- Dynamically set linters based on ESLint configuration
-		-- if has_eslint_config() then
-		-- 	lint.linters_by_ft = {
-		-- 		javascript = { "eslint_d" },
-		-- 		typescript = { "eslint_d" },
-		-- 		javascriptreact = { "eslint_d" },
-		-- 		typescriptreact = { "eslint_d" },
-		-- 		svelte = { "eslint_d" },
-		-- 		go = { "golangcilint" },
-		-- 	}
-		-- else
-		-- 	lint.linters_by_ft = {
-		-- 		go = { "golangcilint" },
-		-- 	}
-		-- end
-
 		local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
 
 		vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {

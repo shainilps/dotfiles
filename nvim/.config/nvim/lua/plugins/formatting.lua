@@ -23,7 +23,6 @@ return {
 				go = { "gofmt", "goimports" },
 				bash = { "shfmt" },
 				elm = { "elm-format" },
-        python = { "ruff" },
         rust={"rust_analyzer"}
 			},
 
