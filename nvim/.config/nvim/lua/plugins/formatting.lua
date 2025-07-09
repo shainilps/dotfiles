@@ -23,7 +23,9 @@ return {
 				go = { "gofmt", "goimports" },
 				bash = { "shfmt" },
 				elm = { "elm-format" },
-        rust={"rust_analyzer"}
+				rust = { "rust_analyzer" },
+				haskell = { "fourmolu" },
+				sql = { "sqlfmt" },
 			},
 
 			-- format_on_save = {

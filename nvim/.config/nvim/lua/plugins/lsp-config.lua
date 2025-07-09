@@ -30,7 +30,9 @@ return {
 					"prismals",
 					"bashls",
 					"elmls",
-          "emmet_ls"
+					"emmet_ls",
+					"rust_analyzer",
+					"hls",
 				},
 			})
 
@@ -46,12 +48,13 @@ return {
 					"stylua",
 					"rust_analyzer",
 					"eslint_d",
+					"fourmolu",
+					"sqlfmt",
 					-- { 'eslint_d', version = '13.1.2' },
 				},
 			})
 		end,
 	},
-
 
 	-- nvim lsp
 	{
@@ -85,6 +88,7 @@ return {
 					"svelte",
 				},
 			})
+			lspconfig.hls.setup({ capabilities = capabilities })
 			lspconfig.svelte.setup({ capabilities = capabilities })
 			lspconfig.astro.setup({ capabilities = capabilities })
 			lspconfig.cssls.setup({ capabilities = capabilities })
@@ -108,13 +112,13 @@ return {
 				update_in_insert = false, -- don’t show while typing
 				severity_sort = true,
 			})
-			vim.keymap.set("n", "<C-d>", function()
+			vim.keymap.set("n", "D", function()
 				vim.diagnostic.open_float(nil, {
 					border = "rounded",
 					source = "always",
 					focusable = false,
 				})
-			end, { desc = "show diagnostic under cursor" })
+			end, { noremap = true, desc = "show diagnostic under cursor" })
 		end,
 	},
 }
