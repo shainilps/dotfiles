@@ -19,7 +19,7 @@ return {
 			require("luasnip.loaders.from_vscode").lazy_load()
 			cmp.setup({
 				completion = {
-					autocomplete = false,
+					-- autocomplete = false, -- for turning off the auto-completion
 				},
 				snippet = {
 					-- REQUIRED - you must specify a snippet engine

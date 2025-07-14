@@ -190,3 +190,8 @@ alias vf='nvim $(fzf)'
 
 
 [ -f "/home/codeshaine/.ghcup/env" ] && . "/home/codeshaine/.ghcup/env" # ghcup-env
+
+
+export ANDROID_SDK_ROOT=$HOME/Android
+export PATH=$ANDROID_SDK_ROOT/cmdline-tools/latest/bin:$ANDROID_SDK_ROOT/platform-tools:$PATH
+
