@@ -127,26 +127,17 @@ export NVM_DIR="$HOME/.nvm"
 
 # for the nvim alias
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+
 alias v='nvim'
 alias run="sh ~/cscript/bin/run.sh"
 alias startup="~/cscript/bin/startup"
-# alias python="python3"
 alias p="pnpm"
-alias px="pnpm exec"
-alias pxd="pnpm dlx"
 
-
-
-
-# pnpm
 export PNPM_HOME="/home/codeshaine/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
-# pnpm end
-
-
 
 #recycle bin
 trash(){
@@ -166,32 +157,28 @@ trash(){
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
- 
-# . "/home/codeshaine/.deno/env"
-
-
-# alias bat='batcat'
 
 export PATH="$HOME/.local/bin:$PATH"
 
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
 
+export EDITOR=nvim
 
 # gid diff with fzf
 alias gd="git status -s | fzf --no-sort --reverse --preview 'git diff --color=always {+2}' --preview-window=right:60%:wrap"
 
 export FZF_DEFAULT_OPTS="--ansi --preview-window 'right:60%' --preview 'batcat --color=always --style=header,grid --line-range :300 {}'"
 
-
-
 alias vf='nvim $(fzf)'
 
-
-
-[ -f "/home/codeshaine/.ghcup/env" ] && . "/home/codeshaine/.ghcup/env" # ghcup-env
-
-
-export ANDROID_SDK_ROOT=$HOME/Android
-export PATH=$ANDROID_SDK_ROOT/cmdline-tools/latest/bin:$ANDROID_SDK_ROOT/platform-tools:$PATH
+#workplace related setting for gnome pop os
+gsettings set org.gnome.mutter dynamic-workspaces false
+gsettings set org.gnome.desktop.wm.preferences num-workspaces 4
+for i in {1..4} 
+do
+  gsettings set "org.gnome.shell.keybindings" "switch-to-application-$i" "[]"
+  gsettings set "org.gnome.desktop.wm.keybindings" "switch-to-workspace-$i" "['<Super>${i}']"
+  gsettings set "org.gnome.desktop.wm.keybindings" "move-to-workspace-$i" "['<Super><Shift>${i}']"
+done
 
