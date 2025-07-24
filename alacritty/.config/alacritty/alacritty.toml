@@ -1,0 +1,21 @@
+[cursor]
+style = "Block"
+
+[font]
+normal = { family = "MesloLGS NF", style = "Regular" }
+bold = { family = "MesloLGS NF", style = "Bold" }
+italic = { family = "MesloLGS NF", style = "Italic" }
+bold_italic = { family = "MesloLGS NF", style = "Bold Italic" }
+size = 8.4
+
+[scrolling]
+history = 1000
+
+
+[window]
+decorations = "none"
+opacity = 0.8
+
+[window.padding]
+x = 10
+y = 10
