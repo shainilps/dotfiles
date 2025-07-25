@@ -35,6 +35,9 @@ exec --no-startup-id nm-applet
 
 exec --no-startup-id blueman-applet
 
+bindsym Print exec --no-startup-id flameshot gui
+bindsym $mod+Print exec --no-startup-id flameshot full -p ~/Pictures
+bindsym $mod+Shift+Print exec --no-startup-id flameshot gui -c
 
 exec --no-startup-id feh --bg-scale "$HOME/Pictures/game.jpg"
 
