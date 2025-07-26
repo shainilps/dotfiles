@@ -2,6 +2,10 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
+# Nvidia driver issue fix(hope it fixes)
+exec --no-startup-id  xrandr --setprovideroutputsource modesetting NVIDIA-0
+exec --no-startup-id xrandr --auto
+
 set $mod Mod4
 # This config file uses keycodes (bindsym) and was written for the QWERTY
 # layout.
