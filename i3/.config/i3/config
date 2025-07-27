@@ -2,10 +2,6 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-# Nvidia driver issue fix(hope it fixes)
-exec --no-startup-id  xrandr --setprovideroutputsource modesetting NVIDIA-0
-exec --no-startup-id xrandr --auto
-
 set $mod Mod4
 # This config file uses keycodes (bindsym) and was written for the QWERTY
 # layout.
@@ -21,6 +17,15 @@ font pango:MesloLGS NF 10
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
+
+
+# Nvidia driver issue fix(hope it fixes)
+
+exec --no-startup-id  xrandr --setprovideroutputsource modesetting NVIDIA-0
+exec --no-startup-id xrandr --auto
+
+exec --no-startup-id picom --config ~/.config/picom/picom.conf
+
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart

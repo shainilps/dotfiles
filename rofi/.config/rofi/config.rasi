@@ -1,0 +1,111 @@
+configuration {
+  modes: "window,drun,run,ssh";
+  font: "MesloLGS NF 13";
+  drun-display-format: "{name}";
+}
+//
+* {
+  // general
+  bg: #1e2327;
+  bgt: #1e232795;
+  t: transparent;
+  fg: #abb2bf;
+  selected-bg: #61afef;
+  selected-fg: @bg;
+  // for windows
+  active: #56b6c2;
+  urgent: #e06c75;
+}
+window {
+  fullscreen: true;
+  padding: 30% 30%;       // you might want to adjust these to resize rofi.
+  transparency: "real";
+  background-color: @bgt;
+  border-color: @t;
+}
+listview {
+  border: 0 0 0 0;
+  padding: 23 0 0;
+  scrollbar: true;
+}
+scrollbar {
+    width:        4px;
+    border:       0;
+    handle-color: @selected-bg;
+    handle-width: 8px;
+    padding:      0 5;
+}
+entry {
+    placeholder: "";
+}
+
+textbox {
+    text-color: @fg;
+}
+element {
+    border:  0;
+    padding: 2px;
+}
+element.normal.normal {
+    background-color: @t;
+    text-color:       @fg;
+}
+element.normal.urgent {
+    background-color: @t;
+    text-color:       @urgent;
+}
+element.normal.active {
+    background-color: @t;
+    text-color:       @active;
+}
+element.selected.normal {
+    background-color: @selected-bg;
+    text-color:       @selected-fg;
+}
+element.selected.urgent {
+    background-color: @selected-bg;
+    text-color:       @urgent;
+}
+element.selected.active {
+    background-color: @selected-bg;
+    text-color:       @selected-fg;
+}
+element.alternate.normal {
+    background-color: @t;
+    text-color:       @fg;
+}
+element.alternate.urgent {
+    background-color: @t;
+    text-color:       @urgent;
+}
+element.alternate.active {
+    background-color: @t;
+    text-color:       @active;
+}
+sidebar {
+    border:       2px 0 0;
+    border-color: @selected-bg;
+}
+inputbar {
+    spacing:    0;
+    text-color: @fg;
+    padding:    2px;
+    children:   [ prompt, textbox-prompt-sep, entry, case-indicator ];
+}
+case-indicator,
+entry,
+prompt,
+button {
+    spacing:    0;
+    text-color: @fg;
+}
+button.selected {
+    background-color: @selected-bg;
+    text-color:       @bg;
+}
+textbox-prompt-sep {
+    expand:     false;
+    str:        ":";
+    text-color: @selected-bg;
+    margin:     0 0.3em 0 0;
+}
