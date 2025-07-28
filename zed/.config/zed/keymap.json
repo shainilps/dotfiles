@@ -1,5 +1,3 @@
-
-// Zed keymap
 //
 // For information on binding keys, see the Zed
 // documentation: https://zed.dev/docs/key-bindings
@@ -17,7 +15,8 @@
     "context": "Editor && vim_mode == normal",
     "bindings": {
       "L": "editor::MoveToEndOfLine",
-      "H": "editor::MoveToBeginningOfLine"
+      "H": "editor::MoveToBeginningOfLine",
+      "ctrl-b": "workspace::ToggleLeftDock"
     }
   },
   {
@@ -25,6 +24,19 @@
     "bindings": {
       "H": "editor::SelectToBeginningOfLine",
       "L": "editor::SelectToEndOfLine"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "g r": "editor::FindAllReferences",
+      "g i": "editor::GoToImplementation"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-shift-f": "editor::Format"
     }
   }
 ]

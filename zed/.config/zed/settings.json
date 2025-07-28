@@ -1,4 +1,3 @@
-
 // Zed settings
 //
 // For information on how to configure Zed, see the Zed
@@ -9,19 +8,23 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   //zed autod update
+  "show_edit_predictions": true,
   "auto_update": false,
   //for ai code completion
   "features": {
-    "edit_prediction_provider": "none"
+    // "edit_prediction_provider": "none"
   },
+  "cursor_blink": false,
+  // "show_completions_on_input": false,
+  // "format_on_save": "off",
   "relative_line_numbers": true,
   "icon_theme": "Zed (Default)",
   "agent": {
+    "single_file_review": false,
     "default_model": {
       "provider": "copilot_chat",
-      "model": "gpt-4.1"
-    },
-    "version": "2"
+      "model": "claude-3.7-sonnet"
+    }
   },
   "vim_mode": true,
   "base_keymap": "VSCode",
@@ -29,12 +32,17 @@
     "metrics": false,
     "diagnostics": false
   },
-  "buffer_font_family": "Terminess Nerd Font Propo",
-  "ui_font_size": 16,
-  "buffer_font_size": 19,
+  // "buffer_font_family": "Terminess Nerd Font Propo",
+  "ui_font_size": 12,
+  "buffer_font_size": 12,
   "theme": {
     "mode": "system",
     "light": "One Light",
     "dark": "One Dark"
   }
+  // "diagnostics": {
+  //   "inline": {
+  //     "enabled": true
+  //   }
+  // }
 }
