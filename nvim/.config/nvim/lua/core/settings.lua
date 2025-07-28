@@ -1,11 +1,8 @@
 -- for folding
 
-local vim = vim
-local opt = vim.opt
-
-opt.foldmethod = "expr"
-opt.foldexpr = "nvim_treesitter#foldexpr()"
-opt.foldenable = false
+vim.o.foldmethod = "expr"
+vim.o.foldexpr = "nvim_treesitter#foldexpr()"
+vim.o.foldenable = false
 -- Set <space> as the leader key
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
@@ -26,13 +23,13 @@ vim.o.clipboard = "unnamedplus"
 vim.o.breakindent = true
 
 -- No swap files
-vim.opt.swapfile = false
-vim.opt.backup = false
-vim.opt.writebackup = false
+vim.o.swapfile = false
+vim.o.backup = false
+vim.o.writebackup = false
 
 -- Save undo history
 vim.o.undofile = true
-vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+vim.o.undodir = os.getenv("HOME") .. "/.vim/undodir"
 
 -- Case-insensitive searching UNLESS \C or capital in search
 vim.o.ignorecase = true
@@ -54,12 +51,11 @@ vim.o.termguicolors = true
 -- Don't show modes (insert/visual)
 -- vim.opt.showmode = false
 
--- Open splits on the right and below
-vim.opt.splitbelow = true
-vim.opt.splitright = true
+vim.o.splitbelow = true
+vim.o.splitright = true
 
 -- Update vim after file update from outside
-vim.opt.autoread = true
+vim.o.autoread = true
 -- Create an autocmd group for reloading files
 local augroup = vim.api.nvim_create_augroup("AutoReload", { clear = true })
 
@@ -70,29 +66,29 @@ vim.api.nvim_create_autocmd({ "CursorHold", "BufEnter", "FocusGained" }, {
 })
 
 -- Indentation
-vim.opt.autoindent = true
-vim.opt.smartindent = true
-vim.opt.smarttab = true
-vim.opt.tabstop = 2
-vim.opt.softtabstop = 2
-vim.opt.shiftwidth = 2
-vim.cmd("set expandtab")
+vim.o.autoindent = true
+vim.o.smartindent = true
+vim.o.smarttab = true
+vim.o.tabstop = 4
+vim.o.softtabstop = 4
+vim.o.shiftwidth = 4
+vim.cmd("set expandtab") -- i dont know what is this
 
 -- Always use spaces instead of tabs
-vim.opt.expandtab = true
+vim.o.expandtab = true
 
 -- Don't wrap lines
-vim.opt.wrap = true
+vim.o.wrap = false
 -- Wrap lines at convenient points
-vim.opt.linebreak = true
+-- vim.o.linebreak = true
 -- Show line breaks
-vim.opt.showbreak = "↳"
+-- vim.o.showbreak = "↳"
 
 -- Start scrolling when we are 8 lines away from borders
-vim.opt.scrolloff = 8
-vim.opt.sidescrolloff = 15
-vim.opt.sidescroll = 5
+vim.o.scrolloff = 8
+vim.o.sidescrolloff = 15
+vim.o.sidescroll = 5
 
 -- This makes vim act like all other editors, buffers can
 -- exist in the background without being in a window.
-vim.opt.hidden = true
+vim.o.hidden = true -- dont know what it is
