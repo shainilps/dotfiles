@@ -8,6 +8,9 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   //zed autod update
+  "debugger": {
+    "dock": "left"
+  },
   "show_edit_predictions": true,
   "auto_update": false,
   //for ai code completion
@@ -34,7 +37,7 @@
   },
   // "buffer_font_family": "Terminess Nerd Font Propo",
   "ui_font_size": 11,
-  "buffer_font_size": 12,
+  "buffer_font_size": 11,
   "theme": {
     "mode": "system",
     "light": "One Light",

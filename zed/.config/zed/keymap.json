@@ -1,9 +1,4 @@
-//
-// For information on binding keys, see the Zed
-// documentation: https://zed.dev/docs/key-bindings
-//
-// To see the default key bindings run `zed: open default keymap`
-// from the command palette.
+
 [
   {
     "context": "Workspace",
@@ -37,6 +32,12 @@
     "context": "Editor",
     "bindings": {
       "ctrl-shift-f": "editor::Format"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-m": "terminal_panel::ToggleFocus"
     }
   }
 ]
