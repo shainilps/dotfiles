@@ -23,16 +23,19 @@ return {
 				go = { "gofmt", "goimports" },
 				bash = { "shfmt" },
 				elm = { "elm-format" },
-				rust = { "rust_analyzer" },
+				rust = { "rustfmt" },
 				haskell = { "fourmolu" },
 				sql = { "sqlfmt" },
+				c = { "clang-format" },
+				cpp = { "clang-format" },
 			},
 
-			-- format_on_save = {
-			-- 	lsp_fallback = true,
-			-- 	async = false,
-			-- 	timeout_ms = 1000,
-			-- },
+			formatters = {
+				["clang-format"] = {
+					command = "clang-format", -- optional override
+					args = '--style="{BasedOnStyle: google, IndentWidth: 4, TabWidth: 4, UseTab: Never, ColumnLimit: 100}"',
+				},
+			},
 		})
 
 		vim.keymap.set({ "n", "v" }, "<leader>gf", function()
