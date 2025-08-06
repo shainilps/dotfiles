@@ -1,7 +1,5 @@
--- im using go land dvelve for debuggin
 return {
 	"mfussenegger/nvim-dap",
-	--	"rcarriga/nvim-dap-ui",
 
 	dependencies = {
 		"rcarriga/nvim-dap-ui",
@@ -9,10 +7,13 @@ return {
 		"nvim-neotest/nvim-nio",
 	},
 	config = function()
-		local dapui = require("dapui")
+		-- require("nio").setup({})
 		local dap = require("dap")
-		 require("dapui").setup({})
-		require("dap-go").setup({})
+		local dapui = require("dapui")
+		local dapgo = require("dap-go")
+		dapui.setup({})
+		dapgo.setup({})
+
 		dap.listeners.before.attach.dapui_config = function()
 			dapui.open()
 		end
