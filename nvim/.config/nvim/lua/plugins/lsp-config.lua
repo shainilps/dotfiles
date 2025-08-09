@@ -19,8 +19,8 @@ return {
 					"ts_ls",
 					"gopls",
 					"clangd",
-					"svelte",
-					"astro",
+					-- "svelte",
+					-- "astro",
 					"cssls",
 					"html",
 					"sqls",
@@ -29,10 +29,11 @@ return {
 					"docker_compose_language_service",
 					"prismals",
 					"bashls",
-					"elmls",
+					-- "elmls",
 					"emmet_ls",
-					"rust_analyzer",
 					"hls",
+					"rust_analyzer",
+					"nil_ls", -- nix
 				},
 			})
 
@@ -41,12 +42,11 @@ return {
 					"prettier",
 					"stylua",
 					"clangd",
-					"elm-format",
+					-- "elm-format",
 					"goimports",
 					"prettierd",
 					"shfmt",
 					"stylua",
-					"rust_analyzer",
 					"eslint_d",
 					"fourmolu",
 					"sqlfmt",
@@ -88,6 +88,7 @@ return {
 					"svelte",
 				},
 			})
+
 			lspconfig.hls.setup({ capabilities = capabilities })
 			lspconfig.svelte.setup({ capabilities = capabilities })
 			lspconfig.astro.setup({ capabilities = capabilities })
@@ -98,10 +99,11 @@ return {
 			lspconfig.dockerls.setup({ capabilities = capabilities })
 			lspconfig.docker_compose_language_service.setup({ capabilities = capabilities })
 			lspconfig.elixirls.setup({ capabilities = capabilities })
-			lspconfig.rust_analyzer.setup({ capabilities = capabilities })
 			lspconfig.prismals.setup({ capabilities = capabilities })
 			lspconfig.bashls.setup({ capabilities = capabilities })
-			lspconfig.elmls.setup({ capabilities = capabilities })
+			-- lspconfig.elmls.setup({ capabilities = capabilities })
+			lspconfig.nil_ls.setup({ capabilities = capabilities })
+
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			-- vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
 			vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
