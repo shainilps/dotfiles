@@ -32,7 +32,7 @@ return {
 					-- "elmls",
 					"emmet_ls",
 					"hls",
-					"rust_analyzer",
+					-- "rust_analyzer", --using rustup one
 					"nil_ls", -- nix
 				},
 			})
@@ -103,6 +103,11 @@ return {
 			lspconfig.bashls.setup({ capabilities = capabilities })
 			-- lspconfig.elmls.setup({ capabilities = capabilities })
 			lspconfig.nil_ls.setup({ capabilities = capabilities })
+			lspconfig.rust_analyzer.setup({ capabilities = capabilities, cmd = { "rust-analyzer" } })
+			lspconfig.ocamllsp.setup({ -- not installed through mason
+				capabilities = capabilities,
+				cmd = { "ocamllsp" },
+			})
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			-- vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})

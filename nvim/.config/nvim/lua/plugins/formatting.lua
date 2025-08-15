@@ -17,23 +17,31 @@ return {
 				json = { "prettierd" },
 				yaml = { "prettierd" },
 				markdown = { "prettierd" },
-				graphql = { "prettierd" },
-				liquid = { "prettierd" },
+				-- graphql = { "prettierd" },
+				-- liquid = { "prettierd" },
 				lua = { "stylua" },
 				go = { "gofmt", "goimports" },
 				bash = { "shfmt" },
-				elm = { "elm-format" },
+				-- elm = { "elm-format" },
 				rust = { "rustfmt" },
-				haskell = { "fourmolu" },
+				-- haskell = { "fourmolu" },
 				sql = { "sqlfmt" },
 				c = { "clang-format" },
 				cpp = { "clang-format" },
+				ocaml = { "ocp-indent" },
 			},
 
 			formatters = {
 				["clang-format"] = {
 					command = "clang-format", -- optional override
 					args = '--style="{BasedOnStyle: google, IndentWidth: 4, TabWidth: 4, UseTab: Never, ColumnLimit: 100}"',
+				},
+				["ocp-indent"] = {
+					command = "ocp-indent",
+					stdin = true,
+				},
+				["rustfmt"] = {
+					command = "rustfmt",
 				},
 			},
 		})
