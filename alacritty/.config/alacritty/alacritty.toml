@@ -2,10 +2,14 @@
 style = "Block"
 
 [font]
-normal = { family = "MesloLGS NF", style = "Regular" }
-bold = { family = "MesloLGS NF", style = "Bold" }
-italic = { family = "MesloLGS NF", style = "Italic" }
-bold_italic = { family = "MesloLGS NF", style = "Bold Italic" }
+# normal = { family = "MesloLGS NF", style = "Regular" }
+# bold = { family = "MesloLGS NF", style = "Bold" }
+# italic = { family = "MesloLGS NF", style = "Italic" }
+# bold_italic = { family = "MesloLGS NF", style = "Bold Italic" }
+normal = { family = "JetBrains Mono", style = "Regular" }
+bold = { family = "JetBrains Mono", style = "Bold" }
+italic = { family = "JetBrains Mono", style = "Italic" }
+bold_italic = { family = "JetBrains Mono", style = "Bold Italic" }
 size = 8.4
 
 [scrolling]
