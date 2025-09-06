@@ -31,7 +31,6 @@ return {
 					"bashls",
 					-- "elmls",
 					"emmet_ls",
-					"hls",
 					-- "rust_analyzer", --using rustup one
 					"nil_ls", -- nix
 				},
@@ -89,7 +88,6 @@ return {
 				},
 			})
 
-			lspconfig.hls.setup({ capabilities = capabilities })
 			lspconfig.svelte.setup({ capabilities = capabilities })
 			lspconfig.astro.setup({ capabilities = capabilities })
 			lspconfig.cssls.setup({ capabilities = capabilities })
@@ -104,9 +102,15 @@ return {
 			-- lspconfig.elmls.setup({ capabilities = capabilities })
 			lspconfig.nil_ls.setup({ capabilities = capabilities })
 			lspconfig.rust_analyzer.setup({ capabilities = capabilities, cmd = { "rust-analyzer" } })
+
 			lspconfig.ocamllsp.setup({ -- not installed through mason
 				capabilities = capabilities,
 				cmd = { "ocamllsp" },
+			})
+
+			lspconfig.hls.setup({
+				capabilities = capabilities,
+				cmd = { "haskell-language-server-wrapper" }, -- not installed through mason (nix)
 			})
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})

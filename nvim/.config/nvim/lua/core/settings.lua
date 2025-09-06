@@ -2,7 +2,7 @@
 
 vim.o.foldmethod = "expr"
 vim.o.foldexpr = "nvim_treesitter#foldexpr()"
-vim.o.foldenable = true
+vim.o.foldenable = false
 
 -- Set <space> as the leader key
 vim.g.mapleader = " "
