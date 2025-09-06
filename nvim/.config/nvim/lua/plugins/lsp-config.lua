@@ -108,10 +108,14 @@ return {
 				cmd = { "ocamllsp" },
 			})
 
-			lspconfig.hls.setup({
-				capabilities = capabilities,
-				cmd = { "haskell-language-server-wrapper" }, -- not installed through mason (nix)
-			})
+			-- lspconfig.hls.setup({
+			-- 	capabilities = capabilities,
+			-- 	args = { "--lsp" },
+			-- 	cmd = { "haskell-language-server-wrapper" }, -- not installed through mason (nix)
+			-- 	root_dir = lspconfig.util.root_pattern("*.cabal", "stack.yaml", "cabal.project", ".git", "*.hs"),
+			-- 	filetypes = { "haskell", "lhaskell" },
+			-- 	single_file_support = true,
+			-- })
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			-- vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
