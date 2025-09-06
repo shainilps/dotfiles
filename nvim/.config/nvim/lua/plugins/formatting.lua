@@ -24,7 +24,7 @@ return {
 				bash = { "shfmt" },
 				-- elm = { "elm-format" },
 				rust = { "rustfmt" },
-				-- haskell = { "fourmolu" },
+				haskell = { "fourmolu" },
 				sql = { "sqlfmt" },
 				c = { "clang-format" },
 				cpp = { "clang-format" },

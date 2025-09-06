@@ -108,6 +108,8 @@ return {
 				cmd = { "ocamllsp" },
 			})
 
+			lspconfig.hls.setup({ capabilities = capabilities }) -- nix shell
+
 			-- lspconfig.hls.setup({
 			-- 	capabilities = capabilities,
 			-- 	args = { "--lsp" },
