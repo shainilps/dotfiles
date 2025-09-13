@@ -192,5 +192,14 @@ done
 [[ ! -r '/home/codeshaine/.opam/opam-init/init.zsh' ]] || source '/home/codeshaine/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
 # END opam configuration
 
+
 #direnv
+eval "$($HOME/.nix-profile/bin/direnv hook zsh)"  #nix profile
 eval "$(direnv hook zsh)"
+
+# quite mode
+# export DIRENV_LOG_FORMAT="$(printf "\033[2mdirenv: %%s\033[0m")"
+# eval "$($HOME/.nix-profile/bin/direnv hook zsh)" 
+# _direnv_hook() {
+#   eval "$(direnv export zsh 2> >(egrep -v -e '^....direnv: export' >&2))"
+# };

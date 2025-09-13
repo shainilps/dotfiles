@@ -4,6 +4,7 @@ return {
 	config = function()
 		local lint = require("lint")
 
+		-- seriously this typescriptecosystem is such a pain with linters
 		local function has_eslint_config()
 			local configs = {
 				-- "eslint.config.mjs",

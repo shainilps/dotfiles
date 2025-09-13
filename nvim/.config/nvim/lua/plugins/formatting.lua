@@ -29,6 +29,7 @@ return {
 				c = { "clang-format" },
 				cpp = { "clang-format" },
 				ocaml = { "ocp-indent" },
+				nix = { "nixfmt" },
 			},
 
 			formatters = {
@@ -42,6 +43,9 @@ return {
 				},
 				["rustfmt"] = {
 					command = "rustfmt",
+				},
+				["gofmt"] = {
+					command = "gofmt",
 				},
 			},
 		})
