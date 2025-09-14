@@ -3,9 +3,8 @@ return {
   config = function()
     require("lualine").setup({
       options = {
-        -- theme = "dracula"
-            -- theme = 'nord'
-            theme = 'rose-pine'
+            -- theme = 'rose-pine'
+                theme = "catppuccin"
       }
     })
   end
