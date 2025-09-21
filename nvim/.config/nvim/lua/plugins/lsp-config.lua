@@ -60,66 +60,60 @@ return {
 		dependencies = {
 			"hrsh7th/cmp-nvim-lsp",
 		},
+
 		config = function()
-			local lspconfig = require("lspconfig")
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
-			lspconfig.lua_ls.setup({
-				capabilities = capabilities,
-			})
-			lspconfig.ts_ls.setup({ capabilities = capabilities })
-			lspconfig.gopls.setup({
-				capabilities = capabilities,
-			})
-			lspconfig.clangd.setup({
-				capabilities = capabilities,
-			})
-			lspconfig.emmet_ls.setup({
-				capabilities = capabilities,
-				filetypes = {
-					"html",
-					"typescriptreact",
-					"javascriptreact",
-					"css",
-					"sass",
-					"scss",
-					"less",
-					"svelte",
-				},
-			})
 
-			lspconfig.svelte.setup({ capabilities = capabilities })
-			lspconfig.astro.setup({ capabilities = capabilities })
-			lspconfig.cssls.setup({ capabilities = capabilities })
-			lspconfig.html.setup({ capabilities = capabilities })
-			lspconfig.sqls.setup({ capabilities = capabilities })
-			lspconfig.tailwindcss.setup({ capabilities = capabilities })
-			lspconfig.dockerls.setup({ capabilities = capabilities })
-			lspconfig.docker_compose_language_service.setup({ capabilities = capabilities })
-			lspconfig.elixirls.setup({ capabilities = capabilities })
-			lspconfig.prismals.setup({ capabilities = capabilities })
-			lspconfig.bashls.setup({ capabilities = capabilities })
-			-- lspconfig.elmls.setup({ capabilities = capabilities })
-			lspconfig.nil_ls.setup({ capabilities = capabilities })
-			lspconfig.rust_analyzer.setup({ capabilities = capabilities, cmd = { "rust-analyzer" } })
+			local servers = {
+				"gopls",
+				"lua_ls",
+				"clangd",
+				"rust_analyzer",
+				"ts_ls",
+				"svelte",
+				"astro",
+				"cssls",
+				"htmls",
+				"sqls",
+				"tailwindcss",
+				"docker_compose_language_service",
+				"dockerls",
+				"elixirls",
+				"prismals",
+				"bashls",
+				"elmls",
+				"ocamllsp",
+				"hls",
+				"nil_ls",
+			}
+			for _, server in ipairs(servers) do
+				vim.lsp.config[server] = {
+					capabilities = capabilities,
+				}
+			end
 
-			lspconfig.ocamllsp.setup({ -- not installed through mason
-				capabilities = capabilities,
-				cmd = { "ocamllsp" },
-			})
+			vim.lsp.enable(servers)
 
-			lspconfig.hls.setup({ capabilities = capabilities }) -- nix shell
-
-			-- lspconfig.hls.setup({
+			-- lspconfig.emmet_ls.setup({
 			-- 	capabilities = capabilities,
-			-- 	args = { "--lsp" },
-			-- 	cmd = { "haskell-language-server-wrapper" }, -- not installed through mason (nix)
-			-- 	root_dir = lspconfig.util.root_pattern("*.cabal", "stack.yaml", "cabal.project", ".git", "*.hs"),
-			-- 	filetypes = { "haskell", "lhaskell" },
-			-- 	single_file_support = true,
+			-- 	filetypes = {
+			-- 		"html",
+			-- 		"typescriptreact",
+			-- 		"javascriptreact",
+			-- 		"css",
+			-- 		"sass",
+			-- 		"scss",
+			-- 		"less",
+			-- 		"svelte",
+			-- 	},
 			-- })
 
+			-- lsp settings
+			vim.keymap.set("n", "gd", vim.lsp.buf.definition, { noremap = true, silent = true })
+			vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { noremap = true, silent = true })
+			vim.keymap.set("n", "gr", vim.lsp.buf.references, { noremap = true, silent = true })
+			vim.keymap.set("n", "gi", vim.lsp.buf.implementation, { noremap = true, silent = true })
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-			-- vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
 			vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
 			vim.diagnostic.config({
 				virtual_text = false, -- no inline text
@@ -128,6 +122,7 @@ return {
 				update_in_insert = false, -- don’t show while typing
 				severity_sort = true,
 			})
+
 			vim.keymap.set("n", "D", function()
 				vim.diagnostic.open_float(nil, {
 					border = "rounded",

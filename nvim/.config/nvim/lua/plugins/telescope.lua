@@ -12,11 +12,6 @@ return {
 			vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
 			vim.keymap.set("n", "<leader>fd", builtin.diagnostics, {})
 			vim.keymap.set("n", "<leader>fs", builtin.lsp_document_symbols, {})
-
-			vim.keymap.set("n", "gd", vim.lsp.buf.definition, { noremap = true, silent = true })
-			vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { noremap = true, silent = true })
-			vim.keymap.set("n", "gr", vim.lsp.buf.references, { noremap = true, silent = true })
-			vim.keymap.set("n", "gi", vim.lsp.buf.implementation, { noremap = true, silent = true })
 		end,
 	},
 	{
