@@ -81,66 +81,79 @@
 -- 			end,
 -- 		})
 --
--- 		vim.cmd("colorscheme rose-pine")
+-- 		-- vim.cmd("colorscheme rose-pine")
 -- 		-- vim.cmd("colorscheme rose-pine-main")
 -- 		-- vim.cmd("colorscheme rose-pine-moon")
--- 		-- vim.cmd("colorscheme rose-pine-dawn")
--- 	end,
--- }
-
--- return {
--- 	"rebelot/kanagawa.nvim",
--- 	priority = 1000,
--- 	config = function()
--- 		require("kanagawa").setup({
--- 			compile = false, -- enable compiling the colorscheme
--- 			undercurl = true, -- enable undercurls
--- 			commentStyle = { italic = true },
--- 			functionStyle = {},
--- 			keywordStyle = { italic = true },
--- 			statementStyle = { bold = true },
--- 			typeStyle = {},
--- 			transparent = false, -- do not set background color
--- 			dimInactive = false, -- dim inactive window `:h hl-NormalNC`
--- 			terminalColors = true, -- define vim.g.terminal_color_{0,17}
--- 			theme = "dragon", -- Load "wave" theme
--- 			background = { -- map the value of 'background' option to a theme
--- 				dark = "dragon", -- try "dragon" !
--- 				-- light = "lotus",
--- 			},
--- 			overrides = function()
--- 				return {
--- 					["@markup.link.label.tsx"] = { underline = false },
--- 				}
--- 			end,
--- 		})
--- 		vim.cmd("colorscheme kanagawa")
+-- 		vim.cmd("colorscheme rose-pine-dawn")
 -- 	end,
 -- }
 
 return {
-	"catppuccin/nvim",
-	name = "catppuccin",
+	"rebelot/kanagawa.nvim",
 	priority = 1000,
 	config = function()
-		require("catppuccin").setup({
-			flavour = "mocha",
-			-- transparent_background = true,
-			style = {
-				comments = { "italic" },
-				strings = { "italic" },
-				operators = { "italic" },
+		require("kanagawa").setup({
+			compile = false, -- enable compiling the colorscheme
+			undercurl = true, -- enable undercurls
+			commentStyle = { italic = true },
+			functionStyle = {},
+			keywordStyle = { italic = true },
+			statementStyle = { bold = true },
+			typeStyle = {},
+			transparent = false, -- do not set background color
+			dimInactive = true, -- dim inactive window `:h hl-NormalNC`
+			terminalColors = true, -- define vim.g.terminal_color_{0,17}
+			theme = "wave", -- Load "wave" theme
+			background = { -- map the value of 'background' option to a theme
+				dark = "wave", -- try "dragon" !
+				light = "lotus",
 			},
-			default_integrations = true,
-			integrations = {
-				cmp = true,
-				treesitter = true,
-			},
+			overrides = function()
+				return {
+					["@markup.link.label.tsx"] = { underline = false },
+				}
+			end,
 		})
-		vim.cmd.colorscheme("catppuccin")
+		vim.cmd("colorscheme kanagawa")
 	end,
 }
-
+--
+-- return {
+-- 	"catppuccin/nvim",
+-- 	name = "catppuccin",
+-- 	priority = 1000,
+-- 	config = function()
+-- 		require("catppuccin").setup({
+-- 			flavour = "mocha",
+-- 			-- transparent_background = true,
+-- 			style = {
+-- 				comments = { "italic" },
+-- 				strings = { "italic" },
+-- 				operators = { "italic" },
+-- 			},
+-- 			default_integrations = true,
+-- 			integrations = {
+-- 				cmp = true,
+-- 				treesitter = true,
+-- 			},
+-- 		})
+-- 		vim.cmd.colorscheme("catppuccin")
+-- 	end,
+-- },
+--
+-- return {
+--   "vague2k/vague.nvim",
+--   lazy = false, -- make sure we load this during startup if it is your main colorscheme
+--   priority = 1000, -- make sure to load this before all the other plugins
+--   config = function()
+--     -- NOTE: you do not need to call setup if you don't want to.
+--     require("vague").setup({
+--       -- optional configuration here
+--     })
+--     vim.cmd("colorscheme vague")
+--   end
+-- }
+--
 -- return {
 --   "gbprod/nord.nvim",
 --   name = "nord",
@@ -160,27 +173,37 @@ return {
 -- }
 --
 
---
 -- return {
---   "ellisonleao/gruvbox.nvim",
---   name = "gruvbox",
---   priority = 1000,
---   config = function()
---     require("gruvbox").setup({
---       transparent_mode = true,
---       italic = {
---         strings = true,
---         emphasis = true,
---         comments = true,
---         operators = false,
---         -- folds = true,
---       },
---     })
---     vim.o.background = "dark"
---     vim.cmd.colorscheme("gruvbox")
---   end,
+-- 	"ellisonleao/gruvbox.nvim",
+-- 	name = "gruvbox",
+-- 	priority = 1000,
+-- 	config = function()
+-- 		require("gruvbox").setup({
+-- 			undercurl = true,
+-- 			underline = true,
+-- 			bold = true,
+-- 			italic = {
+-- 				strings = true,
+-- 				emphasis = true,
+-- 				comments = true,
+-- 				operators = false,
+-- 				folds = true,
+-- 			},
+-- 			strikethrough = true,
+-- 			invert_selection = false,
+-- 			invert_signs = false,
+-- 			invert_tabline = false,
+-- 			inverse = true, -- invert background for search, diffs, statuslines and errors
+-- 			contrast = "", -- can be "hard", "soft" or empty string
+-- 			palette_overrides = {},
+-- 			overrides = {},
+-- 			dim_inactive = false,
+-- 			transparent_mode = false,
+-- 		})
+-- 		vim.o.background = "dark"
+-- 		vim.cmd.colorscheme("gruvbox")
+-- 	end,
 -- }
---
 
 --  return {
 --   "EdenEast/nightfox.nvim",
