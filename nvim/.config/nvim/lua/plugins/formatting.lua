@@ -25,7 +25,6 @@ return {
 				-- elm = { "elm-format" },
 				rust = { "rustfmt" },
 				haskell = { "fourmolu" },
-				sql = { "sqlfmt" },
 				c = { "clang-format" },
 				cpp = { "clang-format" },
 				ocaml = { "ocp-indent" },
