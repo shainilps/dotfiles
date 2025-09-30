@@ -205,3 +205,5 @@ eval "$(direnv hook zsh)"
 # };
 #
 eval "$(zoxide init zsh)"
+
+export PATH="$PATH:$HOME/.zig/bin"

@@ -29,6 +29,7 @@ return {
 				cpp = { "clang-format" },
 				ocaml = { "ocp-indent" },
 				nix = { "nixfmt" },
+				zig = { "zigfmt" },
 			},
 
 			formatters = {

@@ -31,6 +31,7 @@ return {
 					"emmet_ls",
 					-- "rust_analyzer", --using rustup one
 					"nil_ls", -- nix
+                    "zls"
 				},
 			})
 
@@ -79,6 +80,7 @@ return {
 				"ocamllsp",
 				"hls",
 				"nil_ls",
+                "zls"
 			}
 			for _, server in ipairs(servers) do
 				vim.lsp.config[server] = {
