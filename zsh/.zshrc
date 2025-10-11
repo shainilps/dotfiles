@@ -194,7 +194,7 @@ done
 
 
 #direnv
-eval "$($HOME/.nix-profile/bin/direnv hook zsh)"  #nix profile
+# eval "$($HOME/.nix-profile/bin/direnv hook zsh)"  #nix profile
 eval "$(direnv hook zsh)"
 
 # quite mode
