@@ -30,8 +30,8 @@ return {
 					-- "elmls",
 					"emmet_ls",
 					-- "rust_analyzer", --using rustup one
-					"nil_ls", -- nix
-                    "zls"
+					-- "nil_ls", -- nix
+					"zls",
 				},
 			})
 
@@ -46,7 +46,7 @@ return {
 					"shfmt",
 					"stylua",
 					"eslint_d",
-					"fourmolu",
+					-- "fourmolu",
 					-- { 'eslint_d', version = '13.1.2' },
 				},
 			})
@@ -80,7 +80,7 @@ return {
 				"ocamllsp",
 				"hls",
 				"nil_ls",
-                "zls"
+				"zls",
 			}
 			for _, server in ipairs(servers) do
 				vim.lsp.config[server] = {
