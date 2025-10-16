@@ -1,4 +1,4 @@
--- for folding
+-- for folding(for god sake this doesnt work)
 
 vim.o.foldmethod = "expr"
 vim.o.foldexpr = "nvim_treesitter#foldexpr()"
