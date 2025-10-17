@@ -24,8 +24,8 @@ font pango:MesloLGS NF 10
 exec --no-startup-id  xrandr --setprovideroutputsource modesetting NVIDIA-0
 exec --no-startup-id xrandr --auto
 
-# exec --no-startup-id picom --config ~/.config/picom/picom.conf
-exec --no-startup-id sh -c 'picom --config ~/.config/picom/picom.conf --log-level=DEBUG --log-file ~/picom.log'
+exec --no-startup-id picom --config ~/.config/picom/picom.conf
+# exec --no-startup-id sh -c 'picom --config ~/.config/picom/picom.conf --log-level=DEBUG --log-file ~/picom.log'
 
 
 # Start XDG autostart .desktop files using dex. See also
@@ -55,6 +55,8 @@ bindsym $mod+Print exec --no-startup-id flameshot full -p ~/Pictures
 bindsym $mod+Shift+Print exec --no-startup-id flameshot gui -c
 
 exec --no-startup-id feh --bg-scale "$HOME/Pictures/totaro.jpg"
+
+bindsym $mod+Shift+Q exec --no-startup-id "/home/work/.config/i3/script.bash"
 
 
 for_window [class=".*"] border pixel 1

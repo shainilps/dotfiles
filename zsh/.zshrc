@@ -183,6 +183,7 @@ do
 done
 
 
+
 #direnv
 # eval "$($HOME/.nix-profile/bin/direnv hook zsh)"  #nix profile
 eval "$(direnv hook zsh)"
@@ -197,6 +198,7 @@ eval "$(direnv hook zsh)"
 eval "$(zoxide init zsh)"
 
 # export PATH="$PATH:$HOME/.zig/zig-0.14.1/bin"
+
 
 # for yazi
 function y() {
