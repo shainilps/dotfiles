@@ -184,15 +184,6 @@ done
 
 
 
-# BEGIN opam configuration
-# This is useful if you're using opam as it adds:
-#   - the correct directories to the PATH
-#   - auto-completion for the opam binary
-# This section can be safely removed at any time if needed.
-[[ ! -r '/home/codeshaine/.opam/opam-init/init.zsh' ]] || source '/home/codeshaine/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
-# END opam configuration
-
-
 #direnv
 # eval "$($HOME/.nix-profile/bin/direnv hook zsh)"  #nix profile
 eval "$(direnv hook zsh)"
@@ -206,4 +197,12 @@ eval "$(direnv hook zsh)"
 #
 eval "$(zoxide init zsh)"
 
-export PATH="$PATH:$HOME/.zig/zig-0.14.1/bin"
+# export PATH="$PATH:$HOME/.zig/zig-0.14.1/bin"
+
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}

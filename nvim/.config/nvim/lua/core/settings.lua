@@ -1,3 +1,6 @@
+---
+
+vim.opt.termguicolors = true
 -- for folding
 
 vim.o.foldmethod = "expr"

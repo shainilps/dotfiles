@@ -29,7 +29,9 @@ vim.cmd("vnoremap <silent> p p`]")
 vim.cmd("nnoremap <silent> p p`]")
 
 -- vim.keymap.set("n", "<Leader>h", ":noh<CR>", { silent = true })
-vim.api.nvim_set_keymap("n", "<Esc>", ":nohlsearch<Bar>:echo<CR>", { silent = true, noremap = true })
+vim.api.nvim_set_keymap("n", "<Esc><Esc>", ":nohlsearch<Bar>:echo<CR>", { silent = true, noremap = true })
 
 -- Fixes pasting after visual selection.
 vim.keymap.set("v", "p", '"_dP')
+
+vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>")
