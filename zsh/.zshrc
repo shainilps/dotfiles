@@ -199,6 +199,8 @@ eval "$(zoxide init zsh)"
 
 # export PATH="$PATH:$HOME/.zig/zig-0.14.1/bin"
 
+
+# for yazi
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	yazi "$@" --cwd-file="$tmp"
