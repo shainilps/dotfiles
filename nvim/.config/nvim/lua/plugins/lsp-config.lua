@@ -30,7 +30,7 @@ return {
 					-- "elmls",
 					"emmet_ls",
 					-- "rust_analyzer", --using rustup one
-					-- "nil_ls", -- nix
+					"nil_ls", -- nix
 					"zls",
 				},
 			})
