@@ -2,57 +2,10 @@ return {
 	-- mason
 	{
 		"mason-org/mason.nvim",
-		dependencies = {
-			"mason-org/mason-lspconfig.nvim",
-			"WhoIsSethDaniel/mason-tool-installer.nvim",
-		},
 		config = function()
-			local mason_lspconfig = require("mason-lspconfig")
-			local mason_tool_installer = require("mason-tool-installer")
-
 			require("mason").setup()
-
-			mason_lspconfig.setup({
-				automatic_enable = false,
-				ensure_installed = {
-					"lua_ls",
-					"ts_ls",
-					"clangd",
-					-- "svelte",
-					-- "astro",
-					"cssls",
-					"html",
-					"tailwindcss",
-					"dockerls",
-					"docker_compose_language_service",
-					-- "prismals",
-					"bashls",
-					-- "elmls",
-					"emmet_ls",
-					-- "rust_analyzer", --using rustup one
-					"nil_ls", -- nix
-					"zls",
-				},
-			})
-
-			mason_tool_installer.setup({
-				ensure_installed = {
-					"prettier",
-					"stylua",
-					"clangd",
-					-- "elm-format",
-					"goimports",
-					"prettierd",
-					"shfmt",
-					"stylua",
-					"eslint_d",
-					-- "fourmolu",
-					-- { 'eslint_d', version = '13.1.2' },
-				},
-			})
 		end,
 	},
-
 	-- nvim lsp
 	{
 		"neovim/nvim-lspconfig",
@@ -90,20 +43,6 @@ return {
 
 			vim.lsp.enable(servers)
 
-			-- lspconfig.emmet_ls.setup({
-			-- 	capabilities = capabilities,
-			-- 	filetypes = {
-			-- 		"html",
-			-- 		"typescriptreact",
-			-- 		"javascriptreact",
-			-- 		"css",
-			-- 		"sass",
-			-- 		"scss",
-			-- 		"less",
-			-- 		"svelte",
-			-- 	},
-			-- })
-
 			-- lsp settings
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, { noremap = true, silent = true })
 			vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { noremap = true, silent = true })
@@ -129,3 +68,17 @@ return {
 		end,
 	},
 }
+
+-- lspconfig.emmet_ls.setup({
+-- 	capabilities = capabilities,
+-- 	filetypes = {
+-- 		"html",
+-- 		"typescriptreact",
+-- 		"javascriptreact",
+-- 		"css",
+-- 		"sass",
+-- 		"scss",
+-- 		"less",
+-- 		"svelte",
+-- 	},
+-- })
