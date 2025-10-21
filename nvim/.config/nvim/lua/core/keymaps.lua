@@ -1,6 +1,7 @@
-vim.keymap.set("n", "<leader>bn", ":bn<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>bp", ":bp<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>bd", ":bd<CR>", { noremap = true, silent = true })
+-- i was never using it
+-- vim.keymap.set("n", "<leader>bn", ":bn<CR>", { noremap = true, silent = true })
+-- vim.keymap.set("n", "<leader>bp", ":bp<CR>", { noremap = true, silent = true })
+-- vim.keymap.set("n", "<leader>bd", ":bd<CR>", { noremap = true, silent = true })
 
 -- Keymaps for better default experience
 vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
@@ -35,3 +36,6 @@ vim.api.nvim_set_keymap("n", "<Esc><Esc>", ":nohlsearch<Bar>:echo<CR>", { silent
 vim.keymap.set("v", "p", '"_dP')
 
 vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>")
+
+vim.keymap.set("n", "<M-j>", ":cnext<CR>")
+vim.keymap.set("n", "<M-k>", ":cprev<CR>")
