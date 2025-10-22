@@ -208,3 +208,13 @@ function y() {
 	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
 	rm -f -- "$tmp"
 }
+
+# vi mode 
+bindkey -v
+
+autoload -Uz edit-command-line
+zle -N edit-command-line
+
+bindkey -M vicmd "^E" edit-command-line
+
+export KEYTIMEOUT=1
