@@ -197,7 +197,8 @@ eval "$(direnv hook zsh)"
 #
 eval "$(zoxide init zsh)"
 
-# export PATH="$PATH:$HOME/.zig/zig-0.14.1/bin"
+# for zig
+export PATH="$PATH:$HOME/.zig/zig-0.15.2/bin"
 
 
 # for yazi
@@ -218,3 +219,5 @@ zle -N edit-command-line
 bindkey -M vicmd "^E" edit-command-line
 
 export KEYTIMEOUT=1
+
+
