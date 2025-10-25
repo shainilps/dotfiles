@@ -1,5 +1,6 @@
 return {
 	{
+
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
 		config = function()
@@ -24,7 +25,10 @@ return {
 					"prisma",
 					"elm",
 				},
+				modules = {},
+				auto_install = true,
 				sync_install = false,
+				ignore_install = {},
 				highlight = { enable = true },
 				indent = { enable = true },
 			})
