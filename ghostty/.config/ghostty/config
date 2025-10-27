@@ -1,3 +1,6 @@
+
+command = /usr/bin/fish
+
 shell-integration-features = no-cursor
 
 window-decoration = none
