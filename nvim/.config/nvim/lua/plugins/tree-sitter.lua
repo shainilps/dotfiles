@@ -24,6 +24,7 @@ return {
 					"html",
 					"prisma",
 					"elm",
+                    "zig"
 				},
 				modules = {},
 				auto_install = true,
