@@ -56,7 +56,7 @@ bindsym $mod+Shift+Print exec --no-startup-id flameshot gui -c
 
 exec --no-startup-id feh --bg-scale "$HOME/Pictures/totaro.jpg"
 
-bindsym $mod+Shift+Q exec --no-startup-id "/home/work/.config/i3/script.bash"
+bindsym $mod+Shift+Q exec --no-startup-id "/home/codeshaine/.config/i3/script.bash"
 
 
 for_window [class=".*"] border pixel 1
