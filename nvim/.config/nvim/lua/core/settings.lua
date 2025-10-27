@@ -1,5 +1,5 @@
-
 vim.opt.termguicolors = true
+vim.opt.shell = "/usr/bin/fish"
 
 -- for folding(for god sake this doesnt work)
 vim.o.foldmethod = "expr"
