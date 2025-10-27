@@ -28,6 +28,7 @@ if status is-interactive
 
 end
 
+set -U fish_greeting
 
 # PATH setup
 set -x PATH $HOME/bin /usr/local/bin $PATH
@@ -46,16 +47,19 @@ set -x PATH $GOPATH/bin $GOROOT/bin $PATH
 # Editor
 set -x EDITOR nvim
 
-# Aliases
-abbr -a v nvim
-
-alias startup='~/cscript/bin/startup'
-abbr -a p pnpm
-abbr -a vf 'nvim (fzf)'
-
-alias gd='git status -s | fzf --no-sort --reverse --preview "git diff --color=always {+2}" --preview-window=right:60%:wrap'
 
 # FZF defaults
 set -x FZF_DEFAULT_OPTS "--ansi --preview-window 'right:60%' --preview 'batcat --color=always --style=header,grid --line-range :300 {}'"
 
-# fish_vi_key_bindings
+# abbr
+abbr -a v nvim
+
+abbr -a p pnpm
+abbr -a vf 'nvim (fzf)'
+
+abbr -a gd 'git status -s | fzf --no-sort --reverse --preview "git diff --color=always {+2}" --preview-window=right:60%:wrap'
+
+# alias
+alias startup='~/cscript/bin/startup'
+
+fish_vi_key_bindings
