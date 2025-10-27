@@ -28,6 +28,11 @@ if status is-interactive
 
 end
 
+#it was delegating the command to the bash which caused delay so overriding that behaviour by adding default  
+function fish_command_not_found
+    __fish_default_command_not_found_handler $argv
+end
+
 set -U fish_greeting
 
 # PATH setup
