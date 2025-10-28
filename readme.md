@@ -1,3 +1,3 @@
 # dotfiles
 
-made for me
+made for me, by me
