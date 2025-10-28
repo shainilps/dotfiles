@@ -1,9 +1,9 @@
 eval "$(starship init zsh)"
-#
-# # i m only using two plugins so managing these two myself
+
+# i m only using two plugins so managing these two myself
 source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-#
+
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 HISTFILE=~/.histfile
