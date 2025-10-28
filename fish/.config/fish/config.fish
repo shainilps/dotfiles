@@ -67,6 +67,5 @@ abbr -a gd 'git status -s | fzf --no-sort --reverse --preview "git diff --color=
 # alias
 alias startup='~/cscript/bin/startup'
 
-set -Ux nvm_default_version v22.21.0
 
 fish_vi_key_bindings

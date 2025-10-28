@@ -1,24 +1,19 @@
 eval "$(starship init zsh)"
-# ZSH_THEME="robbyrussell"
-
+#
+# # i m only using two plugins so managing these two myself
+source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-export ZSH="$HOME/.oh-my-zsh"
-
-
-plugins=(zsh-autosuggestions zsh-syntax-highlighting)
-
-source $ZSH/oh-my-zsh.sh
+HISTFILE=~/.histfile
+HISTSIZE=50000
+SAVEHIST=50000
 
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-
+#
 # for the nvim alias
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 
@@ -49,7 +44,7 @@ export EDITOR=nvim
 # gid diff with fzf
 alias gd="git status -s | fzf --no-sort --reverse --preview 'git diff --color=always {+2}' --preview-window=right:60%:wrap"
 
-export FZF_DEFAULT_OPTS="--ansi --preview-window 'right:60%' --preview 'batcat --color=always --style=header,grid --line-range :300 {}'"
+export FZF_DEFAULT_OPTS="--ansi --preview-window 'right:60%' --preview 'bat --color=always --style=header,grid --line-range :300 {}'"
 
 alias vf='nvim $(fzf)'
 
@@ -101,4 +96,9 @@ bindkey -M vicmd "^E" edit-command-line
 
 export KEYTIMEOUT=1
 
-
+# fnm
+FNM_PATH="/home/codeshaine/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "`fnm env`"
+fi
