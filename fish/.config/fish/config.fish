@@ -20,6 +20,14 @@ if status is-interactive
         rm -f -- "$tmp"
     end
 
+    set -x FNM_PATH "$HOME/.local/share/fnm"
+
+
+    if test -d "$FNM_PATH"
+    set -x PATH "$FNM_PATH" $PATH
+        fnm env | source
+    end
+
     starship init fish | source
 
     direnv hook fish | source
@@ -66,6 +74,5 @@ abbr -a gd 'git status -s | fzf --no-sort --reverse --preview "git diff --color=
 
 # alias
 alias startup='~/cscript/bin/startup'
-
 
 fish_vi_key_bindings
