@@ -10,6 +10,11 @@ return {
 			"saadparwaiz1/cmp_luasnip",
 			"rafamadriz/friendly-snippets",
 		},
+
+		config = function()
+			local ls = require("luasnip")
+			ls.add_snippets("go", require("snippets.go"))
+		end,
 	},
 	-- completion engine
 	{
