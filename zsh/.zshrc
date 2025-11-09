@@ -13,14 +13,15 @@ SAVEHIST=50000
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
-#
+
 # for the nvim alias
-export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+# export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 
 alias v='nvim'
 alias run="sh ~/cscript/bin/run.sh"
 alias startup="~/cscript/bin/startup"
 alias p="pnpm"
+alias vf='nvim $(fzf)'
 
 #recycle bin
 trash(){
@@ -46,31 +47,9 @@ alias gd="git status -s | fzf --no-sort --reverse --preview 'git diff --color=al
 
 export FZF_DEFAULT_OPTS="--ansi --preview-window 'right:60%' --preview 'bat --color=always --style=header,grid --line-range :300 {}'"
 
-alias vf='nvim $(fzf)'
-
-#workplace related setting for gnome pop os
-# gsettings set org.gnome.mutter dynamic-workspaces false
-# gsettings set org.gnome.desktop.wm.preferences num-workspaces 4
-# for i in {1..4} 
-# do
-#   gsettings set "org.gnome.shell.keybindings" "switch-to-application-$i" "[]"
-#   gsettings set "org.gnome.desktop.wm.keybindings" "switch-to-workspace-$i" "['<Super>${i}']"
-#   gsettings set "org.gnome.desktop.wm.keybindings" "move-to-workspace-$i" "['<Super><Shift>${i}']"
-# done
-
-
-
 #direnv
-# eval "$($HOME/.nix-profile/bin/direnv hook zsh)"  #nix profile
 eval "$(direnv hook zsh)"
 
-# quite mode
-# export DIRENV_LOG_FORMAT="$(printf "\033[2mdirenv: %%s\033[0m")"
-# eval "$($HOME/.nix-profile/bin/direnv hook zsh)" 
-# _direnv_hook() {
-#   eval "$(direnv export zsh 2> >(egrep -v -e '^....direnv: export' >&2))"
-# };
-#
 eval "$(zoxide init zsh)"
 
 # for zig
@@ -102,3 +81,7 @@ if [ -d "$FNM_PATH" ]; then
   export PATH="$FNM_PATH:$PATH"
   eval "`fnm env`"
 fi
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
