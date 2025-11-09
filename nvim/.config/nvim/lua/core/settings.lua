@@ -1,0 +1,35 @@
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
+vim.wo.number = true
+vim.wo.relativenumber = true
+vim.wo.signcolumn = "yes"
+
+local o = vim.o
+o.termguicolors = true
+o.hlsearch = true
+o.mouse = "a"
+o.clipboard = "unnamedplus"
+o.breakindent = true
+o.swapfile = false
+o.backup = false
+o.writebackup = false
+o.undofile = true
+o.undodir = os.getenv("HOME") .. "/.vim/undodir"
+o.ignorecase = true
+o.smartcase = true
+o.updatetime = 250
+o.timeoutlen = 300
+o.completeopt = "menuone,noselect"
+o.splitbelow = true
+o.splitright = true
+o.autoread = true
+o.autoindent = true
+o.smartindent = true
+o.smarttab = true
+o.tabstop = 4
+o.softtabstop = 4
+o.shiftwidth = 4
+o.expandtab = true
+o.wrap = false
+o.hidden = true
