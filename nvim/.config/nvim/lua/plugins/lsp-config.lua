@@ -17,10 +17,11 @@ return {
 				"rust_analyzer",
 				"ts_ls",
 				"tailwindcss",
-				-- "elixirls",
+				"elixirls",
 				"bashls",
 				"nil_ls",
 				"zls",
+				"ocamllsp",
 			}
 			for _, server in ipairs(servers) do
 				vim.lsp.config[server] = {
@@ -30,6 +31,7 @@ return {
 
 			vim.lsp.enable(servers)
 
+			-- lsp settings
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, { noremap = true, silent = true })
 			vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { noremap = true, silent = true })
 			vim.keymap.set("n", "gr", vim.lsp.buf.references, { noremap = true, silent = true })

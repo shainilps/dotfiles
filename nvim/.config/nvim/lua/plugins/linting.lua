@@ -3,7 +3,6 @@ return {
 	event = { "BufReadPre", "BufNewFile" },
 	config = function()
 		local lint = require("lint")
-
 		local function has_eslint_config()
 			local configs = {
 				".eslint.config.js",
@@ -26,7 +25,9 @@ return {
 			typescript = has_eslint_config() and { "eslint_d" } or {},
 			javascriptreact = has_eslint_config() and { "eslint_d" } or {},
 			typescriptreact = has_eslint_config() and { "eslint_d" } or {},
+			svelte = has_eslint_config() and { "eslint_d" } or {},
 			go = { "golangcilint" },
+			bash = { "shellcheck" },
 		}
 
 		local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })

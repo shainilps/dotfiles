@@ -3,7 +3,6 @@ return {
 	event = { "BufReadPre", "BufNewFile" },
 	config = function()
 		local conform = require("conform")
-
 		conform.setup({
 			formatters_by_ft = {
 				javascript = { "prettierd" },
@@ -18,23 +17,24 @@ return {
 				lua = { "stylua" },
 				go = { "gofmt", "goimports" },
 				bash = { "shfmt" },
+				-- elm = { "elm-format" },
 				rust = { "rustfmt" },
 				haskell = { "fourmolu" },
 				c = { "clang-format" },
 				cpp = { "clang-format" },
-				ocaml = { "ocp-indent" },
+				ocaml = { "ocamlformat" },
 				nix = { "nixfmt" },
 				zig = { "zigfmt" },
 			},
 
 			formatters = {
-				["clang-format"] = {
-					command = "clang-format",
-					args = '--style="{BasedOnStyle: google, IndentWidth: 4, TabWidth: 4, UseTab: Never, ColumnLimit: 100}"',
-				},
-				["ocp-indent"] = {
-					command = "ocp-indent",
-					stdin = true,
+				-- ["clang-format"] = {
+				-- 	command = "clang-format",
+				-- 	args = '--style="{BasedOnStyle: google, IndentWidth: 4, TabWidth: 4, UseTab: Never, ColumnLimit: 100}"',
+				-- },
+				["ocamlformat"] = {
+					command = "ocamlformat",
+					-- stdin = true,
 				},
 				["rustfmt"] = {
 					command = "rustfmt",
@@ -51,6 +51,6 @@ return {
 				async = false,
 				timeout_ms = 1000,
 			})
-		end, { desc = "Format file or range (in visual mode)" })
+		end)
 	end,
 }
