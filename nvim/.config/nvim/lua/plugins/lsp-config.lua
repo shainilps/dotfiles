@@ -22,6 +22,9 @@ return {
 				"nil_ls",
 				"zls",
 				"ocamllsp",
+				"solidity_ls_nomicfoundation",
+                "clojure_lsp",
+                "hls"
 			}
 			for _, server in ipairs(servers) do
 				vim.lsp.config[server] = {

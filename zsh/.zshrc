@@ -66,14 +66,19 @@ function y() {
 }
 
 # vi mode 
-bindkey -v
+# bindkey -v
 
 autoload -Uz edit-command-line
 zle -N edit-command-line
 
-bindkey -M vicmd "^E" edit-command-line
+autoload -Uz compinit
+compinit
 
-export KEYTIMEOUT=1
+bindkey '^E' edit-command-line
+# bindkey '^[[Z' expand-or-complete-prefix
+# bindkey -M vicmd "^E" edit-command-line
+
+# export KEYTIMEOUT=1
 
 # fnm
 FNM_PATH="/home/codeshaine/.local/share/fnm"
@@ -85,3 +90,14 @@ fi
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+
+# BEGIN opam configuration
+# This is useful if you're using opam as it adds:
+#   - the correct directories to the PATH
+#   - auto-completion for the opam binary
+# This section can be safely removed at any time if needed.
+[[ ! -r '/home/codeshaine/.opam/opam-init/init.zsh' ]] || source '/home/codeshaine/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
+# END opam configuration
+
+[ -f "/home/codeshaine/.ghcup/env" ] && . "/home/codeshaine/.ghcup/env" # ghcup-env

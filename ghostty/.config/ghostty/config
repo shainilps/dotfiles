@@ -1,6 +1,7 @@
-# command = /usr/bin/fish  
+command = /usr/bin/fish  
 
-shell-integration-features = no-cursor
+shell-integration = fish
+shell-integration-features = cursor
 
 window-decoration = none
 
@@ -16,7 +17,7 @@ window-padding-balance = true
 cursor-style = block
 cursor-style-blink = false
 
-background-opacity = 0.9
+background-opacity = 1
 
 bell-features = no-title 
 

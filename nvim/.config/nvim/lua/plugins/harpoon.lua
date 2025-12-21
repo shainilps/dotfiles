@@ -6,7 +6,7 @@ return {
 
 		vim.keymap.set("n", "<leader>h", harpoon_ui.toggle_quick_menu)
 		vim.keymap.set("n", "<leader>a", harppon_mark.add_file)
-		for i = 1, 5 do
+		for i = 1, 9 do
 			vim.keymap.set("n", "<leader>" .. i, function()
 				harpoon_ui.nav_file(i)
 			end, { noremap = true, silent = true })

@@ -18,6 +18,9 @@ return {
 					"typescript",
 					"go",
 					"zig",
+                    "haskell",
+                    "clojure",
+                    "scala"
 				},
 				highlight = { enable = true },
 				indent = { enable = true },

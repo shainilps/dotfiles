@@ -28,6 +28,16 @@ if status is-interactive
         fnm env | source
     end
 
+    # Initialize opam if available
+    if test -r "$HOME/.opam/opam-init/init.fish"
+        source "$HOME/.opam/opam-init/init.fish"
+    end
+
+    #ghc
+    if test -f /home/codeshaine/.ghcup/env.fish
+        source /home/codeshaine/.ghcup/env.fish
+    end
+
     starship init fish | source
 
     direnv hook fish | source
@@ -41,14 +51,12 @@ function fish_command_not_found
     __fish_default_command_not_found_handler $argv
 end
 
-set -U fish_greeting
+set -U fish_greeting 
 
 # PATH setup
 set -x PATH $HOME/bin /usr/local/bin $PATH
 
 set -x PATH $HOME/.local/bin $PATH
-
-set -x PATH /opt/nvim-linux-x86_64/bin $PATH
 
 set -x PATH $HOME/.zig/zig-0.15.2/bin $PATH
 
@@ -56,6 +64,8 @@ set -x PATH $HOME/.zig/zig-0.15.2/bin $PATH
 set -x GOROOT /usr/local/go
 set -x GOPATH $HOME/go
 set -x PATH $GOPATH/bin $GOROOT/bin $PATH
+
+set -x PATH $HOME/.foundry/bin $PATH
 
 # Editor
 set -x EDITOR nvim
@@ -76,7 +86,13 @@ abbr -a gd 'git status -s | fzf --no-sort --reverse --preview "git diff --color=
 alias startup='~/cscript/bin/startup'
 
 fish_vi_key_bindings
+# set -e fish_key_bindings
 
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
+
+
+fish_add_path $HOME/.local/share/coursier/bin
+
+
