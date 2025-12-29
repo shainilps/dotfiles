@@ -28,6 +28,7 @@ return {
 			svelte = has_eslint_config() and { "eslint_d" } or {},
 			go = { "golangcilint" },
 			bash = { "shellcheck" },
+			haskell = { "hlint" },
 		}
 
 		local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })

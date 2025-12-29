@@ -19,11 +19,11 @@ return {
 				bash = { "shfmt" },
 				-- elm = { "elm-format" },
 				rust = { "rustfmt" },
-				-- haskell = { "fourmolu" },
+				haskell = { "fourmolu" },
 				c = { "clang-format" },
 				cpp = { "clang-format" },
 				ocaml = { "ocamlformat" },
-				nix = { "nixfmt" },
+				-- nix = { "nixfmt" },
 				zig = { "zigfmt" },
 			},
 
