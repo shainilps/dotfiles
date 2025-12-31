@@ -38,6 +38,8 @@ if status is-interactive
         source /home/codeshaine/.ghcup/env.fish
     end
 
+    fzf --fish | source
+
     starship init fish | source
 
     direnv hook fish | source
@@ -72,7 +74,7 @@ set -x EDITOR nvim
 
 
 # FZF defaults
-set -x FZF_DEFAULT_OPTS "--ansi --preview-window 'right:60%' --preview 'batcat --color=always --style=header,grid --line-range :300 {}'"
+set -x FZF_DEFAULT_OPTS "--ansi --preview-window 'right:60%' --preview 'bat --color=always --style=header,grid --line-range :300 {}'"
 
 # abbr
 abbr -a v nvim
