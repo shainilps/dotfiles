@@ -21,6 +21,8 @@ background-opacity = 1
 
 bell-features = no-title 
 
+custom-shader = ~/.config/ghostty/shaders/cursor_warp.glsl
+
 # This is the configuration file for Ghostty.
 #
 # This template file has been automatically created at the following
