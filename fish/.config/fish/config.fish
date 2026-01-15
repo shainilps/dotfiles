@@ -97,4 +97,6 @@ set --export PATH $BUN_INSTALL/bin $PATH
 
 fish_add_path $HOME/.local/share/coursier/bin
 
+fish_add_path /opt/riscv/xpack-riscv-none-elf-gcc-15.2.0-1/bin
+
 

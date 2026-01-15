@@ -1,6 +1,6 @@
-command = /usr/bin/fish  
+command = /usr/bin/bash  
 
-shell-integration = fish
+shell-integration = bash
 shell-integration-features = cursor
 
 window-decoration = none
@@ -21,7 +21,7 @@ background-opacity = 1
 
 bell-features = no-title 
 
-custom-shader = ~/.config/ghostty/shaders/cursor_warp.glsl
+# custom-shader = ~/.config/ghostty/shaders/cursor_warp.glsl
 
 # This is the configuration file for Ghostty.
 #
