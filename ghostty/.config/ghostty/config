@@ -1,4 +1,4 @@
-command = /usr/bin/bash  
+command = /bin/bash  
 
 shell-integration = bash
 shell-integration-features = cursor
