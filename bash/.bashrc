@@ -40,7 +40,8 @@ export PATH="$GOPATH/bin:$GOROOT/bin:$PATH"
 
 export PATH="$HOME/.foundry/bin:$PATH"
 
-export FZF_DEFAULT_OPTS="--ansi --preview-window 'right:60%' --preview 'bat --color=always --style=header,grid --line-range :300 {}'"
+# export FZF_DEFAULT_OPTS="--ansi --preview-window 'right:60%' --preview 'bat --color=always --style=header,grid --line-range :300 {}'"
+export FZF_DEFAULT_OPTS="--ansi"
 
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
@@ -63,15 +64,13 @@ if [ -f "$HOME/.ghcup/env" ]; then
     . "$HOME/.ghcup/env"
 fi
 
-if [ -f ~/.fzf.bash ]; then
-    . ~/.fzf.bash
-fi
-
 eval "$(starship init bash)"
 
 eval "$(direnv hook bash)"
 
 eval "$(zoxide init bash)"
+
+eval "$(fzf --bash)"
 
 if [ -f "$HOME/.cargo/env" ]; then
     . "$HOME/.cargo/env"
@@ -79,11 +78,14 @@ fi
 
 alias v='nvim'
 alias p='pnpm'
-alias vf='nvim $(fzf)'
 alias gd='git status -s | fzf --no-sort --reverse --preview "git diff --color=always {+2}" --preview-window=right:60%:wrap'
 alias startup='~/cscript/bin/startup'
 
-# set -o vi
+vf() {
+    nvim "$(fzf --ansi --preview-window right:60% --preview "bat --color=always --style=header,grid --line-range :300 {}")"
+}
+
+set -o vi
 
 if [ -d ~/.bashrc.d ]; then
     for rc in ~/.bashrc.d/*; do
