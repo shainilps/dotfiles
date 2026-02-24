@@ -27,6 +27,7 @@ return {
 			local cmp = require("cmp")
 			require("luasnip.loaders.from_vscode").lazy_load()
 			cmp.setup({
+				-- preselect = cmp.PreselectMode.Item,
 				performance = {
 					max_view_entries = 20,
 				},

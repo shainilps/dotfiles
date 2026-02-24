@@ -28,10 +28,11 @@ return {
 			},
 
 			formatters = {
-				-- ["clang-format"] = {
-				-- 	command = "clang-format",
-				-- 	args = '--style="{BasedOnStyle: google, IndentWidth: 4, TabWidth: 4, UseTab: Never, ColumnLimit: 100}"',
-				-- },
+				["clang-format"] = {
+					command = "clang-format",
+					-- ColumnLimit: 100
+					args = '--style="{BasedOnStyle: LLVM, IndentWidth: 4, TabWidth: 4, UseTab: Never}"',
+				},
 				["ocamlformat"] = {
 					command = "ocamlformat",
 					-- stdin = true,

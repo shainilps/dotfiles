@@ -25,6 +25,6 @@ x = 10
 y = 10
 
 [terminal] 
-shell="/bin/fish"
+shell="/bin/bash"
 
 

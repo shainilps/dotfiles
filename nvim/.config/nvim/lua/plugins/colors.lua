@@ -41,7 +41,7 @@ return {
 	},
 	{
 		"vague2k/vague.nvim",
-		enabled = true,
+		enabled = false,
 		lazy = false, -- make sure we load this during startup if it is your main colorscheme
 		priority = 1000, -- make sure to load this before all the other plugins
 		config = function()
@@ -58,12 +58,41 @@ return {
 		name = "rose-pine",
 		config = function()
 			require("rose-pine").setup({
-                styles = {
-                    italic = false
-                }
-            })
+				styles = {
+					italic = false,
+				},
+			})
 
 			vim.cmd("colorscheme rose-pine")
+		end,
+	},
+
+	{
+		"maxmx03/solarized.nvim",
+		lazy = false,
+		enabled = false,
+		priority = 1000,
+		opts = {
+			variant = "winter", -- "spring" | "summer" | "autumn" | "winter" (default)
+		},
+		config = function(_, opts)
+			vim.o.termguicolors = true
+			vim.o.background = "dark"
+			require("solarized").setup(opts)
+			vim.cmd.colorscheme("solarized")
+		end,
+	},
+	{
+		"ellisonleao/gruvbox.nvim",
+		lazy = false,
+		enabled = true,
+		priority = 1000,
+		config = function()
+			require("gruvbox").setup({
+				contrast = "dark",
+			})
+			vim.o.background = "dark"
+			vim.cmd.colorscheme("gruvbox")
 		end,
 	},
 }
