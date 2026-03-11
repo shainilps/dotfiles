@@ -90,8 +90,13 @@ return {
 		config = function()
 			require("gruvbox").setup({
 				contrast = "dark",
+				overrides = {
+					FloatBorder = { fg = "#a89984", bg = "#1d2021" }, -- gruvbox gray on dark bg
+					NormalFloat = { bg = "#1d2021" },
+				},
 			})
 			vim.o.background = "dark"
+
 			vim.cmd.colorscheme("gruvbox")
 		end,
 	},

@@ -1,5 +1,6 @@
 return {
 	"ThePrimeagen/harpoon",
+	dependencies = { "nvim-lua/plenary.nvim" },
 	config = function()
 		local harpoon_ui = require("harpoon.ui")
 		local harppon_mark = require("harpoon.mark")

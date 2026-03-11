@@ -25,7 +25,7 @@ exec --no-startup-id  xrandr --setprovideroutputsource modesetting NVIDIA-0
 exec --no-startup-id xrandr --output  eDP-1 --primary --auto --output DP-1-0  --auto --right-of eDP-1
 # exec --no-startup-id xrandr --auto
 
-exec --no-startup-id picom --config ~/.config/picom/picom.conf
+# exec --no-startup-id picom --config ~/.config/picom/picom.conf (disabling becuase it have performance issue)
 # exec --no-startup-id sh -c 'picom --config ~/.config/picom/picom.conf --log-level=DEBUG --log-file ~/picom.log'
 
 
@@ -49,7 +49,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 exec --no-startup-id nm-applet
 
-exec --no-startup-id blueman-applet
+# exec --no-startup-id blueman-applet
 
 bindsym Print exec --no-startup-id flameshot gui
 

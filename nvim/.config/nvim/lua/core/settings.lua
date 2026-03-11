@@ -34,3 +34,6 @@ o.shiftwidth = 4
 o.expandtab = true
 o.wrap = false
 o.hidden = true
+o.winborder =  "rounded"
+-- o.cursorline = true
+-- o.cursorlineopt = "line"
