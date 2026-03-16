@@ -14,13 +14,13 @@ return {
 					"cpp",
 					"rust",
 					"elixir",
-					"javascript",
+					-- "javascript",
 					"typescript",
 					"go",
-					"zig",
+					-- "zig",
                     "haskell",
-                    "clojure",
-                    "scala"
+                    -- "clojure",
+                    -- "scala"
 				},
 				highlight = { enable = true },
 				indent = { enable = true },
