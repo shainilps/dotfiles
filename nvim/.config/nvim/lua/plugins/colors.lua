@@ -91,8 +91,10 @@ return {
 			require("gruvbox").setup({
 				contrast = "dark",
 				overrides = {
-					FloatBorder = { fg = "#a89984", bg = "#1d2021" }, -- gruvbox gray on dark bg
+					FloatBorder = { fg = "#a89984", bg = "#1d2021" },
 					NormalFloat = { bg = "#1d2021" },
+					TreesitterContext = { bg = "#32302f" },
+					TreesitterContextLineNumber = { fg = "#a89984", bg = "#32302f" },
 				},
 			})
 			vim.o.background = "dark"
