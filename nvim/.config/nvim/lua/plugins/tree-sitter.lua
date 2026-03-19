@@ -2,8 +2,9 @@ return {
 	{
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
+		branch = "master",
 		config = function()
-			local configs = require("nvim-treesitter")
+			local configs = require("nvim-treesitter.configs")
 			configs.setup({
 				ensure_installed = {
 					"json",
@@ -18,9 +19,9 @@ return {
 					"typescript",
 					"go",
 					-- "zig",
-                    "haskell",
-                    -- "clojure",
-                    -- "scala"
+					"haskell",
+					-- "clojure",
+					-- "scala"
 				},
 				highlight = { enable = true },
 				indent = { enable = true },
