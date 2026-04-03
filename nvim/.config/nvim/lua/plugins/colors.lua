@@ -17,7 +17,7 @@ return {
 				terminalColors = true, -- define vim.g.terminal_color_{0,17}
 				theme = "wave", -- Load "wave" theme
 				background = { -- map the value of 'background' option to a theme
-					dark = "wave", -- try "dragon" !
+					dark = "dragon", -- try "dragon" !
 					light = "lotus",
 				},
 				overrides = function()

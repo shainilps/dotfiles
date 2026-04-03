@@ -19,6 +19,7 @@ return {
 				-- "tailwindcss",
 				"elixirls",
 				"bashls",
+				"asm_lsp",
 				-- "nil_ls",
 				-- "zls",
 				-- "ocamllsp",

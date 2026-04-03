@@ -22,7 +22,8 @@ font pango:MesloLGS NF 10
 # Nvidia driver issue fix(hope it fixes)
 
 exec --no-startup-id  xrandr --setprovideroutputsource modesetting NVIDIA-0
-exec --no-startup-id xrandr --output  eDP-1 --primary --auto --output DP-1-0  --auto --right-of eDP-1
+# exec --no-startup-id xrandr --output  eDP-1 --primary --auto --output DP-1-0  --auto --right-of eDP-1
+exec --no-startup-id xrandr --output  eDP-1 --primary --auto --output HDMI-1-0  --auto --right-of eDP-1
 # exec --no-startup-id xrandr --auto
 
 # exec --no-startup-id picom --config ~/.config/picom/picom.conf (disabling becuase it have performance issue)

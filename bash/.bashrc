@@ -95,3 +95,7 @@ if [ -d ~/.bashrc.d ]; then
     done
 fi
 unset rc
+
+alias copy_from_vm='rsync -avz vm:/home/rintaro/freightcom/ /home/codeshaine/frieghtcom/'
+alias copy_to_vm='rsync -avz /home/codeshaine/frieghtcom/ vm:/home/rintaro/freightcom/'
+

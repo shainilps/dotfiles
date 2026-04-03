@@ -95,3 +95,23 @@ end, {
 
 vim.keymap.set("v", "<leader>tj", ":GoAddTagsSmart json camel<CR>", { desc = "add json tags" })
 vim.keymap.set("v", "<leader>tjs", ":GoAddTagsSmart json snake<CR>", { desc = "add json tags with snake case" })
+
+-----
+---
+
+local term_win = nil
+
+vim.api.nvim_create_user_command("ToggleTerm", function()
+	if term_win and vim.api.nvim_win_is_valid(term_win) then
+		vim.api.nvim_win_close(term_win, true)
+		term_win = nil
+		return
+	end
+
+	vim.cmd("botright 12split")
+	term_win = vim.api.nvim_get_current_win()
+	vim.cmd("terminal")
+	vim.cmd("startinsert")
+end, {})
+
+vim.keymap.set({ "n", "t" }, "<leader>ot", "<cmd>ToggleTerm<CR>", { desc = "Toggle Terminal" })
