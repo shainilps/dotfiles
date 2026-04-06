@@ -87,3 +87,7 @@ fish_add_path $HOME/.local/share/coursier/bin
 fish_add_path /opt/riscv/xpack-riscv-none-elf-gcc-15.2.0-1/bin
 
 fish_add_path $HOME/.cargo/bin
+
+abbr -a  copy_from_vm 'rsync -avz vm:/home/rintaro/freightcom/ /home/codeshaine/frieghtcom/'
+abbr -a  copy_to_vm 'rsync -avz /home/codeshaine/frieghtcom/ vm:/home/rintaro/freightcom/'
+

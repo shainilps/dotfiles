@@ -6,7 +6,7 @@ vim.wo.relativenumber = true
 vim.wo.signcolumn = "yes"
 
 local o = vim.o
-o.shell = "/bin/bash"
+o.shell = "/usr/bin/fish"
 o.termguicolors = true
 o.hlsearch = true
 o.mouse = "a"
