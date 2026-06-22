@@ -40,6 +40,7 @@ if status is-interactive
 
     direnv hook fish | source
 
+
     zoxide init fish | source
 
 end
@@ -49,7 +50,6 @@ function fish_command_not_found
 end
 
 set -U fish_greeting 
-
 
 fish_add_path $HOME/bin 
 fish_add_path $HOME/.local/bin 
@@ -90,4 +90,11 @@ fish_add_path $HOME/.cargo/bin
 
 abbr -a  copy_from_vm 'rsync -avz vm:/home/rintaro/freightcom/ /home/codeshaine/frieghtcom/'
 abbr -a  copy_to_vm 'rsync -avz /home/codeshaine/frieghtcom/ vm:/home/rintaro/freightcom/'
+
+# if set -q KITTY_INSTALLATION_DIR
+#     set --global KITTY_SHELL_INTEGRATION enabled
+#     source "$KITTY_INSTALLATION_DIR/shell-integration/fish/vendor_conf.d/kitty-shell-integration.fish"
+#     set --prepend fish_complete_path "$KITTY_INSTALLATION_DIR/shell-integration/fish/vendor_completions.d"
+# end
+
 
