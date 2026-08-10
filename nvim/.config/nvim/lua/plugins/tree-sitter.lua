@@ -107,4 +107,31 @@ return {
 			})
 		end,
 	},
+	{
+		"nvim-treesitter/nvim-treesitter-textobjects",
+		branch = "main",
+		event = { "BufReadPost", "BufWritePost", "BufNewFile" },
+		config = function()
+			require("nvim-treesitter-textobjects").setup({
+				select = {
+					lookahead = true,
+				},
+			})
+
+			local select = require("nvim-treesitter-textobjects.select")
+
+			local function map_obj(key, obj)
+				vim.keymap.set({ "x", "o" }, key, function()
+					select.select_textobject(obj, "textobjects")
+				end, { desc = "Select " .. obj })
+			end
+
+			map_obj("af", "@function.outer")
+			map_obj("if", "@function.inner")
+			map_obj("ac", "@class.outer")
+			map_obj("ic", "@class.inner")
+			map_obj("aa", "@parameter.outer")
+			map_obj("ia", "@parameter.inner")
+		end,
+	},
 }
