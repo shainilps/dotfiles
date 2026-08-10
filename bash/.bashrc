@@ -99,7 +99,10 @@ unset rc
 alias copy_from_vm='rsync -avz vm:/home/rintaro/freightcom/ /home/codeshaine/frieghtcom/'
 alias copy_to_vm='rsync -avz /home/codeshaine/frieghtcom/ vm:/home/rintaro/freightcom/'
 
-
-
 # Added by Antigravity CLI installer
 export PATH="/home/codeshaine/.local/bin:$PATH"
+
+if test -n "$KITTY_INSTALLATION_DIR"; then
+    export KITTY_SHELL_INTEGRATION="enabled"
+    source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"
+fi

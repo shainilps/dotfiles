@@ -1,5 +1,11 @@
 if status is-interactive 
 
+    if set -q KITTY_INSTALLATION_DIR
+        set --global KITTY_SHELL_INTEGRATION enabled
+        source "$KITTY_INSTALLATION_DIR/shell-integration/fish/vendor_conf.d/kitty-shell-integration.fish"
+        set --prepend fish_complete_path "$KITTY_INSTALLATION_DIR/shell-integration/fish/vendor_completions.d"
+    end
+
     function trash
         if test (count $argv) -eq 0
             echo "Usage: trash <file>"
@@ -84,10 +90,4 @@ fish_add_path $HOME/.local/share/coursier/bin
 fish_add_path /opt/riscv/xpack-riscv-none-elf-gcc-15.2.0-1/bin
 
 fish_add_path $HOME/.cargo/bin
-
-# if set -q KITTY_INSTALLATION_DIR
-#     set --global KITTY_SHELL_INTEGRATION enabled
-#     source "$KITTY_INSTALLATION_DIR/shell-integration/fish/vendor_conf.d/kitty-shell-integration.fish"
-#     set --prepend fish_complete_path "$KITTY_INSTALLATION_DIR/shell-integration/fish/vendor_completions.d"
-# end
 
