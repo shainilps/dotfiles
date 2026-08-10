@@ -655,5 +655,5 @@ binds {
     Print { spawn-sh "noctalia msg screenshot-region"; }
     Ctrl+Print { spawn-sh "noctalia msg screenshot-fullscreen"; }
     Alt+Print { spawn-sh "noctalia msg screenshot-fullscreen pick"; }
-    Ctrl+Shift+V { spawn-sh "noctalia msg panel-toggle clipboard"; }
+    Alt+Shift+V { spawn-sh "noctalia msg panel-toggle clipboard"; }
 }
