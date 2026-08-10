@@ -101,3 +101,6 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # END opam configuration
 
 [ -f "/home/codeshaine/.ghcup/env" ] && . "/home/codeshaine/.ghcup/env" # ghcup-env
+
+# Added by Antigravity CLI installer
+export PATH="/home/codeshaine/.local/bin:$PATH"

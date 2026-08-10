@@ -1,5 +1,5 @@
-command = /bin/bash  
-shell-integration = bash
+command = /bin/fish  
+shell-integration = fish
 # shell-integration-features = cursor
 
 window-decoration = none

@@ -5,7 +5,7 @@ if status is-interactive
             echo "Usage: trash <file>"
             return 1
         end
-        set dir "/home/$USER/recycle_bin/(date +'%d-%m-%Y')"
+        set dir "$HOME/recycle_bin/(date +'%d-%m-%Y')"
         mkdir -p $dir
         mv $argv[1] $dir
         echo "Moved '$argv[1]' to $dir"
@@ -73,8 +73,6 @@ abbr -a p pnpm
 abbr -a vf 'nvim (fzf)'
 abbr -a gd 'git status -s | fzf --no-sort --reverse --preview "git diff --color=always {+2}" --preview-window=right:60%:wrap'
 
-alias startup='~/cscript/bin/startup'
-
 fish_vi_key_bindings
 # set -e fish_key_bindings
 
@@ -83,18 +81,13 @@ fish_add_path $BUN_INSTALL/bin
 
 fish_add_path $HOME/.local/share/coursier/bin
 
-
 fish_add_path /opt/riscv/xpack-riscv-none-elf-gcc-15.2.0-1/bin
 
 fish_add_path $HOME/.cargo/bin
-
-abbr -a  copy_from_vm 'rsync -avz vm:/home/rintaro/freightcom/ /home/codeshaine/frieghtcom/'
-abbr -a  copy_to_vm 'rsync -avz /home/codeshaine/frieghtcom/ vm:/home/rintaro/freightcom/'
 
 # if set -q KITTY_INSTALLATION_DIR
 #     set --global KITTY_SHELL_INTEGRATION enabled
 #     source "$KITTY_INSTALLATION_DIR/shell-integration/fish/vendor_conf.d/kitty-shell-integration.fish"
 #     set --prepend fish_complete_path "$KITTY_INSTALLATION_DIR/shell-integration/fish/vendor_completions.d"
 # end
-
 
