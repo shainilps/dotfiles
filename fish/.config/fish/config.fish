@@ -70,6 +70,7 @@ fish_add_path $GOPATH/bin
 fish_add_path $HOME/.foundry/bin 
 
 set -x EDITOR nvim
+set -x BROWSER brave-browser
 
 set -x FZF_DEFAULT_OPTS "--ansi --preview-window 'right:60%' --preview 'bat --color=always --style=header,grid --line-range :300 {}'"
 
@@ -89,4 +90,6 @@ fish_add_path $HOME/.local/share/coursier/bin
 fish_add_path /opt/riscv/xpack-riscv-none-elf-gcc-15.2.0-1/bin
 
 fish_add_path $HOME/.cargo/bin
+
+abbr -a rss newsboat
 
