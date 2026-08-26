@@ -72,7 +72,7 @@ fish_add_path $HOME/.foundry/bin
 set -x EDITOR nvim
 set -x BROWSER brave-browser
 
-set -x FZF_DEFAULT_OPTS "--ansi --preview-window 'right:60%' --preview 'bat --color=always --style=header,grid --line-range :300 {}'"
+set -x FZF_DEFAULT_OPTS "--ansi --preview-window 'right:60%' --preview 'bat --color=always --style=header,grid --line-range :300 {}' --walker-skip=.git,node_modules,.jj"
 
 abbr -a v nvim
 abbr -a p pnpm
