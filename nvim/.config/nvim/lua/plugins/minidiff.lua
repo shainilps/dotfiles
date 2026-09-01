@@ -10,7 +10,7 @@ return {
 			-- whenever a source's `attach` returns false, so a jj repo uses jj and
 			-- everything else keeps using git.
 			source = {
-				require("core.jj-diff").source,
+				-- require("core.jj-diff").source,
 				diff.gen_source.git(),
 			},
 			view = {

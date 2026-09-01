@@ -21,3 +21,8 @@ vim.keymap.set("n", "<M-j>", ":cnext<CR>")
 vim.keymap.set("n", "<M-k>", ":cprev<CR>")
 vim.keymap.set("v", "p", '"_dP')
 vim.keymap.set("t", "<Space>", "<Space>", { noremap = true })
+
+vim.keymap.set("n", "<leader>mc", function()
+	local mc_ns = vim.api.nvim_create_namespace("nvim.multicursor")
+	vim.api.nvim_buf_clear_namespace(0, mc_ns, 0, -1)
+end, { desc = "Clear multicursors" })
