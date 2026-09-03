@@ -40,7 +40,7 @@ return {
 			end,
 		})
 
-		vim.keymap.set("n", "<leader>gl", function()
+		vim.keymap.set("n", "<leader>ll", function()
 			lint.try_lint()
 		end)
 	end,
