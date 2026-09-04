@@ -56,18 +56,6 @@ return {
 						symbols = { modified = "*", readonly = "[-]", unnamed = "[No Name]" },
 					},
 				},
-				lualine_x = {
-					{
-						function()
-							return require("noice").api.status.mode.get()
-						end,
-						cond = function()
-							return require("noice").api.status.mode.has()
-						end,
-						color = { fg = "#ff9e64" },
-					},
-					"fileformat",
-				},
 				lualine_y = { "branch", "progress" },
 				lualine_z = { "location" },
 			},
