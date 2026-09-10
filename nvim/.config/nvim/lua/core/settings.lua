@@ -37,3 +37,4 @@ o.hidden = true
 o.winborder = "rounded"
 -- o.cursorline = true
 -- o.cursorlineopt = "line"
+o.laststatus = 3
