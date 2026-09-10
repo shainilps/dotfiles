@@ -21,7 +21,7 @@ return {
 				"bashls",
 				"asm_lsp",
 				-- "nil_ls",
-				-- "zls",
+				"zls",
 				-- "ocamllsp",
 				-- "solidity_ls_nomicfoundation",
 				-- "clojure_lsp",

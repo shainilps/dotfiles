@@ -6,11 +6,7 @@ return {
 		local diff = require("mini.diff")
 
 		diff.setup({
-			-- jj first, git as fallback. mini.diff tries each in order and moves on
-			-- whenever a source's `attach` returns false, so a jj repo uses jj and
-			-- everything else keeps using git.
 			source = {
-				-- require("core.jj-diff").source,
 				diff.gen_source.git(),
 			},
 			view = {
