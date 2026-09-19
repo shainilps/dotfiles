@@ -56,6 +56,7 @@ return {
 				"go",
 				-- "zig",
 				"haskell",
+                "prisma"
 				-- "clojure",
 				-- "scala"
 			}

@@ -20,6 +20,7 @@ return {
 				"elixirls",
 				"bashls",
 				"asm_lsp",
+                "pyright",
 				-- "nil_ls",
 				"zls",
 				-- "ocamllsp",

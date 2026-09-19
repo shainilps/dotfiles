@@ -43,9 +43,6 @@ export PATH="$HOME/.foundry/bin:$PATH"
 # export FZF_DEFAULT_OPTS="--ansi --preview-window 'right:60%' --preview 'bat --color=always --style=header,grid --line-range :300 {}'"
 # export FZF_DEFAULT_OPTS="--ansi"
 
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
 export PATH="$HOME/.local/share/coursier/bin:$PATH"
 
 export PATH="/opt/riscv/xpack-riscv-none-elf-gcc-15.2.0-1/bin:$PATH"

@@ -1,5 +1,5 @@
-vim.keymap.set("n", "<leader>w", vim.cmd.write, { desc = "Write" })
-vim.keymap.set("n", "<leader>q", vim.cmd.quit, { desc = "Quit" })
+-- vim.keymap.set("n", "<leader>w", vim.cmd.write, { desc = "Write" })
+-- vim.keymap.set("n", "<leader>q", vim.cmd.quit, { desc = "Quit" })
 vim.keymap.set("n", "H", "^")
 vim.keymap.set("v", "H", "^")
 vim.keymap.set("n", "L", "$")

@@ -60,7 +60,7 @@ fish_add_path $HOME/bin
 fish_add_path $HOME/.local/bin 
 fish_add_path /usr/local/bin 
 
-fish_add_path $HOME/.zig/zig-0.15.2/bin 
+fish_add_path $HOME/.zig/zig-x86_64-linux-0.16.0/bin 
 
 set -x GOROOT /usr/local/go
 set -x GOPATH $HOME/go
@@ -81,9 +81,6 @@ abbr -a gd 'git status -s | fzf --no-sort --reverse --preview "git diff --color=
 
 fish_vi_key_bindings
 # set -e fish_key_bindings
-
-set --export BUN_INSTALL "$HOME/.bun"
-fish_add_path $BUN_INSTALL/bin 
 
 fish_add_path $HOME/.local/share/coursier/bin
 
