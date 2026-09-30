@@ -90,3 +90,12 @@ fish_add_path $HOME/.cargo/bin
 
 abbr -a rss newsboat
 
+# remove this once usecase done
+fish_add_path $HOME/.dpm/bin
+set -x JAVA_HOME "$HOME/.local/jdks/jdk-21.0.12.1+1"
+fish_add_path "$JAVA_HOME/bin:$PATH"
+
+set -Ux PNPM_HOME ~/.local/share/pnpm
+fish_add_path $PNPM_HOME
+
+fish_add_path /usr/local/cuda/bin

@@ -38,3 +38,4 @@ o.winborder = "rounded"
 -- o.cursorline = true
 -- o.cursorlineopt = "line"
 o.laststatus = 3
+vim.o.exrc = true

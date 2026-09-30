@@ -103,3 +103,11 @@ if test -n "$KITTY_INSTALLATION_DIR"; then
     export KITTY_SHELL_INTEGRATION="enabled"
     source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"
 fi
+
+# pnpm
+export PNPM_HOME="/home/codeshaine/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
