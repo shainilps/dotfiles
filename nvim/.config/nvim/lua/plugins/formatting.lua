@@ -28,6 +28,11 @@ return {
 			},
 
 			formatters = {
+				["prettierd"] = {
+					env = {
+						PRETTIERD_DEFAULT_CONFIG = vim.fn.stdpath("config") .. "/prettierrc.json",
+					},
+				},
 				["clang-format"] = {
 					command = "clang-format",
 					-- ColumnLimit: 100
