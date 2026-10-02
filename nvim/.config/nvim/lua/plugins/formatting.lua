@@ -30,7 +30,7 @@ return {
 			formatters = {
 				["prettierd"] = {
 					env = {
-						PRETTIERD_DEFAULT_CONFIG = vim.fn.stdpath("config") .. "/prettierrc.json",
+						PRETTIERD_DEFAULT_CONFIG = vim.fn.stdpath("config") .. "/lua/default-configs/prettierrc.json",
 					},
 				},
 				["clang-format"] = {

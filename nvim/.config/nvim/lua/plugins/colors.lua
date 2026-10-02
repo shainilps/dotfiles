@@ -124,7 +124,7 @@ return {
 	},
 	{
 		"vague2k/vague.nvim",
-		enabled = true,
+		enabled = false,
 		lazy = false, -- make sure we load this during startup if it is your main colorscheme
 		priority = 1000, -- make sure to load this before all the other plugins
 		config = function()
@@ -154,10 +154,10 @@ return {
 	{
 		"maxmx03/solarized.nvim",
 		lazy = false,
-		enabled = false,
+		enabled = true,
 		priority = 1000,
 		opts = {
-			variant = "winter", -- "spring" | "summer" | "autumn" | "winter" (default)
+			variant = "spring", -- "spring" | "summer" | "autumn" | "winter" (default)
 		},
 		config = function(_, opts)
 			vim.o.termguicolors = true
