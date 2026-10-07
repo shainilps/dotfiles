@@ -12,7 +12,9 @@ export GOPATH="$HOME/go"
 export JAVA_HOME="$HOME/.local/jdks/jdk-21.0.12.1+1"
 export PNPM_HOME="$HOME/.local/share/pnpm"
 
-export FZF_DEFAULT_OPTS="--ansi --preview-window 'right:60%' --preview 'bat --color=always --style=header,grid --line-range :300 {}' --walker-skip=.git,node_modules,.jj"
+export FZF_DEFAULT_OPTS="--ansi --walker-skip=.git,node_modules,.jj"
+# file preview only where the items are files (ctrl-t, vf)
+export FZF_CTRL_T_OPTS="--preview-window 'right:60%' --preview 'bat --color=always --style=header,grid --line-range :300 {}'"
 
 # ---- path ----
 export PATH="$HOME/bin:$PATH"
@@ -78,12 +80,11 @@ fi
 eval "$(fzf --bash)"
 eval "$(starship init bash)"
 eval "$(direnv hook bash)"
-eval "$(zoxide init bash)"
 
 alias v='nvim'
 alias p='pnpm'
-alias vf='nvim "$(fzf)"'
+vf() { local f; f=$(FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS $FZF_CTRL_T_OPTS" fzf) && nvim "$f"; }
 alias gd='git status -s | fzf --no-sort --reverse --preview "git diff --color=always {+2}" --preview-window=right:60%:wrap'
 alias rss='newsboat'
 
-set -o vi
+# set -o vi
