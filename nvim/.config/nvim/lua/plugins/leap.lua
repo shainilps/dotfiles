@@ -11,7 +11,7 @@ return {
 			desc = "Leap backward",
 		})
 
-		vim.keymap.set({ "n", "x", "o" }, "gm", "<Plug>(leap-from-window)", {
+		vim.keymap.set({ "n", "x", "o" }, "gw", "<Plug>(leap-from-window)", {
 			desc = "Leap from window",
 		})
 	end,
