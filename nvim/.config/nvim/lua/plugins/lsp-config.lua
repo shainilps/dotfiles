@@ -20,12 +20,13 @@ return {
 				"elixirls",
 				"bashls",
 				"asm_lsp",
-                "pyright",
+				"pyright",
 				-- "nil_ls",
 				"zls",
 				-- "ocamllsp",
 				-- "solidity_ls_nomicfoundation",
 				-- "clojure_lsp",
+				"kotlin_language_server",
 				"hls",
 			}
 			for _, server in ipairs(servers) do

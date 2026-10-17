@@ -1,5 +1,16 @@
 return {
 	{
+		-- local port of doom-spacegrey, lives in colors/spacegrey.lua
+		dir = vim.fn.stdpath("config"),
+		name = "spacegrey",
+		lazy = false,
+		enabled = true,
+		priority = 1000,
+		config = function()
+			vim.cmd.colorscheme("spacegrey")
+		end,
+	},
+	{
 		"catppuccin/nvim",
 		enabled = false,
 		lazy = false,
@@ -154,7 +165,7 @@ return {
 	{
 		"maxmx03/solarized.nvim",
 		lazy = false,
-		enabled = true,
+		enabled = false,
 		priority = 1000,
 		opts = {
 			variant = "spring", -- "spring" | "summer" | "autumn" | "winter" (default)

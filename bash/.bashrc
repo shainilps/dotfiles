@@ -88,3 +88,5 @@ alias gd='git status -s | fzf --no-sort --reverse --preview "git diff --color=al
 alias rss='newsboat'
 
 # set -o vi
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools

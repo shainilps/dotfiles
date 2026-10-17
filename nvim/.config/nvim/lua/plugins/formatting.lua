@@ -25,6 +25,7 @@ return {
 				ocaml = { "ocamlformat" },
 				-- nix = { "nixfmt" },
 				zig = { "zigfmt" },
+				kotlin = { "ktfmt" },
 			},
 
 			formatters = {
