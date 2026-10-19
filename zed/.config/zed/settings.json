@@ -7,11 +7,26 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "cli_default_open_behavior": "new_window",
+  "diff_view_style": "unified",
+  "project_panel": {
+    "dock": "left"
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "button": false,
+    "dock": "left"
+  },
+  "git_panel": {
+    "dock": "left"
+  },
   "edit_predictions": {
     "provider": "zed"
   },
   "buffer_font_weight": 400.0,
-  "buffer_font_family": "Maple Mono Normal NF",
+  "buffer_font_family": "JetBrains Mono NL",
   "agent_servers": {
     "claude-acp": {
       "type": "registry"
@@ -19,6 +34,10 @@
   },
   "server_url": "https://zed.dev",
   "agent": {
+    "threads_sidebar": {
+      "position": "right"
+    },
+    "dock": "right",
     "default_model": {
       "provider": "google",
       "model": "gemini-2.5-flash",
@@ -35,6 +54,7 @@
   "icon_theme": "Zed (Default)",
   "base_keymap": "VSCode",
   "vim_mode": true,
+  "relative_line_numbers": true,
   "cursor_blink": false,
   "current_line_highlight": "none",
   "disable_ai": false,

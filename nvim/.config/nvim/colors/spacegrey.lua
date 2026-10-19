@@ -181,7 +181,7 @@ local groups = {
 	diffLine = { fg = c.violet },
 
 	-- syntax
-	Comment = { fg = comments, bg = comment_bg and lighten(c.bg, 0.05) or nil, italic = true },
+	Comment = { fg = comments, bg = comment_bg and lighten(c.bg, 0.05) or nil },
 	Constant = { fg = constants },
 	String = { fg = strings },
 	Character = { fg = strings },
@@ -210,7 +210,7 @@ local groups = {
 	SpecialChar = { fg = c.teal },
 	Tag = { fg = c.red },
 	Delimiter = { fg = c.fg },
-	SpecialComment = { fg = doc_comments, italic = true },
+	SpecialComment = { fg = doc_comments },
 	Debug = { fg = c.red },
 	Underlined = { fg = highlight, underline = true },
 	Ignore = { fg = c.base5 },
@@ -262,7 +262,7 @@ local groups = {
 	["@punctuation.bracket"] = { fg = c.fg },
 	["@punctuation.special"] = { fg = c.teal },
 	["@comment"] = { link = "Comment" },
-	["@comment.documentation"] = { fg = doc_comments, italic = true },
+	["@comment.documentation"] = { fg = doc_comments },
 	["@comment.error"] = { fg = error, bold = true },
 	["@comment.warning"] = { fg = warning, bold = true },
 	["@comment.todo"] = { fg = c.yellow, bold = true },
