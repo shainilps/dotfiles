@@ -7,63 +7,44 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  //zed autod update
-  "debugger": {
-    "dock": "left"
-  },
-  "disable_ai": true,
-  "show_edit_predictions": true,
-  "auto_update": false,
-  "cursor_blink": false,
-  // "show_completions_on_input": false,
-  "format_on_save": "off",
-  "relative_line_numbers": true,
-  "icon_theme": "Zed (Default)",
-  "agent": {
-    "single_file_review": false,
-    "default_model": {
-      "provider": "copilot_chat",
-      "model": "claude-3.7-sonnet"
+  "buffer_font_weight": 400.0,
+  "buffer_font_family": "Maple Mono Normal NF",
+  "agent_servers": {
+    "claude-acp": {
+      "type": "registry"
     }
   },
-  "vim_mode": true,
-  "base_keymap": null,
-  "telemetry": {
-    "metrics": false,
-    "diagnostics": false
+  "server_url": "https://zed.dev",
+  "agent": {
+    "default_model": {
+      "provider": "google",
+      "model": "gemini-2.5-flash",
+      "enable_thinking": true
+    },
+    "favorite_models": [],
+    "model_parameters": []
   },
-  // "buffer_font_family": "Terminess Nerd Font Propo",
-  // "buffer_font_family": "JetBrainsMonoNL Nerd Font Propo",
-  "buffer_font_family": "JetBrains Mono",
-  "ui_font_size": 11,
-  "buffer_font_size": 11,
+  "terminal": {
+    "shell": {
+      "program": "bash"
+    }
+  },
+  "icon_theme": "Zed (Default)",
+  "base_keymap": "VSCode",
+  "vim_mode": true,
+  "disable_ai": false,
+  "proxy": "",
+  "auto_update": false,
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "when_closing_with_no_tabs": "platform_default",
+  "ui_font_size": 16,
+  "buffer_font_size": 15.0,
   "theme": {
     "mode": "system",
-    "light": "One Light",
+    "light": "One Dark",
     "dark": "One Dark"
   },
-  // "diagnostics": {
-  //   "inline": {
-  //     "enabled": true
-  //   }
-  // }
-  //
-
-  "scrollbar": {
-    "show": "never"
-  },
-
-  "toolbar": {
-    "breadcrumbs": false,
-    "quick_actions": false
-  },
-  "title_bar": {
-    "show_branch_icon": true,
-    "show_branch_name": true,
-    "show_project_items": false,
-    "show_onboarding_banner": false,
-    "show_user_picture": false,
-    "show_sign_in": false,
-    "show_menus": false
-  }
 }
