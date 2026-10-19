@@ -7,6 +7,9 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "edit_predictions": {
+    "provider": "zed"
+  },
   "buffer_font_weight": 400.0,
   "buffer_font_family": "Maple Mono Normal NF",
   "agent_servers": {
@@ -32,6 +35,8 @@
   "icon_theme": "Zed (Default)",
   "base_keymap": "VSCode",
   "vim_mode": true,
+  "cursor_blink": false,
+  "current_line_highlight": "none",
   "disable_ai": false,
   "proxy": "",
   "auto_update": false,
@@ -44,7 +49,7 @@
   "buffer_font_size": 15.0,
   "theme": {
     "mode": "system",
-    "light": "One Dark",
-    "dark": "One Dark"
+    "light": "Spacegrey",
+    "dark": "Spacegrey"
   },
 }
