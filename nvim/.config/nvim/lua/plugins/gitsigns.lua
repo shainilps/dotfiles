@@ -1,0 +1,70 @@
+return {
+	-- "lewis6991/gitsigns.nvim",
+	-- event = { "BufReadPost", "BufWritePost", "BufNewFile" },
+	-- config = function()
+	-- 	local gs = require("gitsigns")
+	--
+	-- 	gs.setup({
+	-- 		signs = {
+	-- 			add = { text = "▕" },
+	-- 			change = { text = "▕" },
+	-- 			delete = { text = "▕" },
+	-- 			topdelete = { text = "▕" },
+	-- 			changedelete = { text = "▕" },
+	-- 			untracked = { text = "┆" },
+	-- 		},
+	-- 		signs_staged = {
+	-- 			add = { text = "▕" },
+	-- 			change = { text = "▕" },
+	-- 			delete = { text = "▕" },
+	-- 			topdelete = { text = "▕" },
+	-- 			changedelete = { text = "▕" },
+	-- 		},
+	-- 		preview_config = { border = "rounded" },
+	-- 		current_line_blame_opts = { delay = 300 },
+	-- 		on_attach = function(buf)
+	-- 			local function map(mode, lhs, rhs, desc)
+	-- 				vim.keymap.set(mode, lhs, rhs, { buffer = buf, desc = desc })
+	-- 			end
+	--
+	-- 			local function nav(direction)
+	-- 				return function()
+	-- 					if vim.wo.diff then
+	-- 						vim.cmd.normal({ direction == "next" and "]c" or "[c", bang = true })
+	-- 					else
+	-- 						gs.nav_hunk(direction)
+	-- 					end
+	-- 				end
+	-- 			end
+	-- 			local function visual_range()
+	-- 				return { vim.fn.line("."), vim.fn.line("v") }
+	-- 			end
+	--
+	-- 			map("n", "]h", nav("next"), "Next hunk")
+	-- 			map("n", "[h", nav("prev"), "Prev hunk")
+	-- 			map("n", "]H", function() gs.nav_hunk("last") end, "Last hunk")
+	-- 			map("n", "[H", function() gs.nav_hunk("first") end, "First hunk")
+	--
+	-- 			map({ "o", "x" }, "ih", gs.select_hunk, "Hunk textobject")
+	--
+	-- 			map("n", "<leader>hs", gs.stage_hunk, "Stage/unstage hunk")
+	-- 			map("x", "<leader>hs", function() gs.stage_hunk(visual_range()) end, "Stage/unstage lines")
+	-- 			map("n", "<leader>hr", gs.reset_hunk, "Reset hunk")
+	-- 			map("x", "<leader>hr", function() gs.reset_hunk(visual_range()) end, "Reset lines")
+	-- 			map("n", "gH", gs.reset_hunk, "Reset hunk")
+	-- 			map("x", "gH", function() gs.reset_hunk(visual_range()) end, "Reset lines")
+	-- 			map("n", "<leader>hS", gs.stage_buffer, "Stage buffer")
+	-- 			map("n", "<leader>gR", gs.reset_buffer, "Reset buffer")
+	--
+	-- 			map("n", "<leader>hp", gs.preview_hunk, "Preview hunk (float)")
+	-- 			map("n", "<leader>hi", gs.preview_hunk_inline, "Preview hunk (inline)")
+	-- 			map("n", "<leader>hb", function() gs.blame_line({ full = true }) end, "Blame line")
+	-- 			map("n", "<leader>hd", gs.diffthis, "Diff against index")
+	-- 			map("n", "<leader>hD", function() gs.diffthis("~") end, "Diff against HEAD~")
+	--
+	-- 			map("n", "<leader>hB", gs.toggle_current_line_blame, "Toggle inline blame")
+	-- 			map("n", "<leader>hw", gs.toggle_word_diff, "Toggle word diff")
+	-- 		end,
+	-- 	})
+	-- end,
+}
